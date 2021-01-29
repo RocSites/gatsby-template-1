@@ -6,6 +6,10 @@ import Image from "../components/image"
 import LogoHorizontal from '../images/default-monochrome-white.svg'
 import SEO from "../components/seo"
 import {makeStyles} from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
+import Button from '@material-ui/core/Button'
+
+
 
 const withStyles = makeStyles((theme) => ({
   root: {
@@ -22,9 +26,32 @@ const withStyles = makeStyles((theme) => ({
     bottom: "70px",
     border: "1px solid black"
   },
+  landingWrapper:{
+    display: "flex",
+    margin: "auto",
+    marginTop: "7%",
+    flexDirection: "column",
+  },
+  landingText: {
+    textAlign: "center",
+    marginTop: "10%",
+    color: "white"
+  },
   landingLogo:{
-    width: "200px",
-    margin: "auto"
+    width: "300px",
+    margin: "auto",
+    marginTop: "10%"
+  },
+  landingButton: {
+    margin:"20px",
+    backgroundColor: "black",
+    color: "white",
+    borderRadius: "6px",
+    textTransform: "none",
+    width: "150px"
+  },
+  landingButtonWrapper: {
+    marginTop: "3%"
   }
 
 }));
@@ -36,11 +63,16 @@ const IndexPage = () => {
     <Layout>
     <SEO title="Home" />
     <div className={classes.root}>
-      <img className={classes.landingLogo} src={LogoHorizontal}/>
+      <div className={classes.landingWrapper}>
+        <img className={classes.landingLogo} src={LogoHorizontal}/>
+        <Typography className={classes.landingText}>Web Design & Marketing Solutions</Typography>
+        <div className={classes.landingButtonWrapper}>
+          <Button className={classes.landingButton}>Landing Button 1</Button>
+          <Button className={classes.landingButton}>Landing Button 2</Button>
+        </div>
+      </div>
     </div>
-    <div className={classes.diagonal}>
-
-    </div>
+    <div className={classes.diagonal}></div>
     <Link to="/page-2/">Go to page 2</Link> <br />
   </Layout>
   )
