@@ -47,7 +47,7 @@ const Header = () => {
 
   return (
     <header className={classes.navbar}>
-        <Link to="/"style={{color: `white`,textDecoration: `none`,}}>
+        <Link to="/"style={{color: `white`,textDecoration: `none`}}>
           <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>
         <div className={classes.navbarWrapper}>
