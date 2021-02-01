@@ -94,7 +94,12 @@ const withStyles = makeStyles((theme) => ({
   cardOne: {
     backgroundColor: "#2196f3",
     borderRadius: "15px"
+  },
+  cardOneHeader: {
+    color: "white",
+    fontWeight: "bold"
   }
+
 
 }));
 
@@ -121,7 +126,7 @@ const IndexPage = () => {
       <div className={classes.stockPhotoWrapper}>
         <Card className={classes.cardOne}>
          <img className={classes.stockPhotoOne} src={ResponsiveDesign}/>
-         <CardHeader title="Responsive Web Design"></CardHeader>
+         <CardHeader className={classes.cardOneHeader} title="Responsive Web Design"></CardHeader>
         </Card>
       </div>
     </div>
