@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const withStyles = makeStyles((theme) => ({
   logo: {
     height: "auto",
-    width: "170px",
+    width: "200px",
     margin: "20px"
   },
   navbar: {
@@ -18,7 +18,6 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     background: "rgb(253,29,29)",
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
-    marginBottom: "-80px"
   },
   navbarWrapper:{
     display: "flex",
@@ -28,7 +27,7 @@ const withStyles = makeStyles((theme) => ({
   navbarLink: {
     borderBottom: "1px solid black",
     margin: "20px",
-    paddingTop: "20px",
+    paddingTop: "10px",
   },
   navbarButton: {
     margin:"20px",
@@ -47,14 +46,14 @@ const Header = () => {
 
   return (
     <header className={classes.navbar}>
-        <Link to="/"style={{color: `white`,textDecoration: `none`}}>
+        <Link to="/"style={{color: `white`,textDecoration: `none`, display: "flex"}}>
           <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>
         <div className={classes.navbarWrapper}>
           <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography>
-          <Button className={classes.navbarButton}>Button 4</Button>
+          <Button className={classes.navbarButton}>Contact Us</Button>
         </div>
      
     </header>

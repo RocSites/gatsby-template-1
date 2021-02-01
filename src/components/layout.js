@@ -15,10 +15,22 @@ import "./layout.css"
 
 const withStyles = makeStyles((theme) =>({
   footer: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
     backgroundColor: "black",
     color: "white",
-    marginTop: "1rem"
-  }
+    marginTop: "1rem",
+    height: "50px",
+  },
+  layoutRoot: {
+    display: "flex",
+    flexDirection: "column",
+    minHeight: "100vh"
+  },
+   content:{
+     flexGrow: 1
+   }
 }))
 
 const Layout = ({ children }) => {
@@ -36,8 +48,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div>
-        <main>{children}</main>
+      <div className={classes.layoutRoot}>
+        <main className={classes.content}>{children}</main>
         <footer className={classes.footer}>
           © {new Date().getFullYear()} RedPin Ventures LLC
         </footer>
