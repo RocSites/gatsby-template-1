@@ -149,7 +149,6 @@ const IndexPage = () => {
       </div>
     </div>
     <div id="form">
-   
       <form 
         name="Contact Form" 
         method="POST" 

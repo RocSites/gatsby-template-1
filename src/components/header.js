@@ -35,7 +35,15 @@ const withStyles = makeStyles((theme) => ({
     color: "white",
     borderRadius: "6px",
     textTransform: "none",
-    width: "150px"
+    width: "150px",
+    "& a": {
+      textDecoration: "none",
+      color: "white"
+    },
+    '&:hover': {
+      backgroundColor: 'gray',
+      boxShadow: 'none',
+    },
   }
 
 }));
@@ -53,7 +61,9 @@ const Header = () => {
           {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography> */}
-          <Button className={classes.navbarButton}>Contact Us</Button>
+          <Button className={classes.navbarButton}>
+            <Link to="/contact">Contact Us</Link>
+            </Button>
         </div>
      
     </header>
