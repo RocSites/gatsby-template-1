@@ -147,7 +147,7 @@ const IndexPage = () => {
         </Card>
       </div>
     </div>
-    <div>
+    <div id="form">
  
     </div>
   </Layout>
