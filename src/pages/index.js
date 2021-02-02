@@ -14,7 +14,7 @@ import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
 import scrollTo from 'gatsby-plugin-smoothscroll'
-import kwesforms from 'kwesforms'
+// import kwesforms from 'kwesforms'
 
 
 const withStyles = makeStyles((theme) => ({
@@ -110,7 +110,7 @@ const withStyles = makeStyles((theme) => ({
 
 }));
 
-kwesforms.init();
+// kwesforms.init();
 
 const IndexPage = () => {
   const classes = withStyles();
@@ -151,7 +151,7 @@ const IndexPage = () => {
       </div>
     </div>
     <div id="form">
-      <form class="kwes-form" action="https://kwes.io/api/foreign/forms/T2itCNhj5diHQIOukiUu">
+      {/* <form class="kwes-form" action="https://kwes.io/api/foreign/forms/T2itCNhj5diHQIOukiUu">
         <label for="name">Your Name</label>
         <input type="text" name="name" rules="required|max:255"/>
 
@@ -159,6 +159,17 @@ const IndexPage = () => {
         <input type="email" name="email" rules="required|max:255"></input>
 
         <button type="submit">Submit</button>
+      </form> */}
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label>Your Name: <input type="text" name="name" /></label>   
+        </p>
+        <p>
+          <label>Your Email: <input type="email" name="email" /></label>
+        </p>
+        <p>
+          <button type="submit">Send</button>
+        </p>
       </form>
     </div>
   </Layout>
