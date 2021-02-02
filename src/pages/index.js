@@ -150,7 +150,13 @@ const IndexPage = () => {
     </div>
     <div id="form">
    
-      <form name="Contact Form" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+      <form 
+        name="Contact Form" 
+        method="POST" 
+        data-netlify="true" 
+        data-netlify-recaptcha="true"
+        action="/thank-you"
+        >
         <input type="hidden" name="form-name" value="Contact Form" />
         <div>
           <label>Your Email:</label>
