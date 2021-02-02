@@ -4,15 +4,14 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import LogoHorizontal from '../images/default-monochrome-white.svg'
-import ResponsiveDesign from '../images/responsive_color.png'
+import ResponsiveDesign from '../images/web-design.png'
+import SeoPhoto from '../images/seo2.png'
+import MarketingPhoto from '../images/monitor.png'
 import SEO from "../components/seo"
 import {makeStyles} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
 import CardHeader from "@material-ui/core/CardHeader"
 
 
@@ -50,7 +49,7 @@ const withStyles = makeStyles((theme) => ({
   },
   landingButton: {
     margin:"20px",
-    backgroundColor: "#2196f3",
+    backgroundColor: "black",
     color: "white",
     borderRadius: "35px",
     padding:"15px",
@@ -86,18 +85,24 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     margin: "20px"
   },
-  stockPhotoOne: {
-    width: "200px",
+  stockPhoto: {
+    width: "210px",
     display: "flex",
-    margin: "auto"
+    margin: "auto",
+    marginTop: "10px"
   },
-  cardOne: {
-    backgroundColor: "#2196f3",
-    borderRadius: "15px"
+  stockPhotoCard: {
+    backgroundColor: "#f07539",
+    borderRadius: "15px",
+    paddingTop: "0px",
+    margin:"20px"
   },
-  cardOneHeader: {
+  stockPhotoCardHeader: {
     color: "white",
-    fontWeight: "bold"
+    textAlign: "center",
+    "& span":{
+      fontWeight: "bold",
+    }
   }
 
 
@@ -124,9 +129,17 @@ const IndexPage = () => {
         <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
       <div className={classes.stockPhotoWrapper}>
-        <Card className={classes.cardOne}>
-         <img className={classes.stockPhotoOne} src={ResponsiveDesign}/>
-         <CardHeader className={classes.cardOneHeader} title="Responsive Web Design"></CardHeader>
+        <Card className={classes.stockPhotoCard}>
+         <img className={classes.stockPhoto} src={ResponsiveDesign}/>
+         <CardHeader className={classes.stockPhotoCardHeader} title="Responsive Web Design"></CardHeader>
+        </Card>
+        <Card className={classes.stockPhotoCard}>
+         <img className={classes.stockPhoto} src={SeoPhoto}/>
+         <CardHeader className={classes.stockPhotoCardHeader} title="Custom Marketing Solutions"></CardHeader>
+        </Card>
+        <Card className={classes.stockPhotoCard}>
+         <img className={classes.stockPhoto} src={MarketingPhoto}/>
+         <CardHeader className={classes.stockPhotoCardHeader} title="Search Engine Optimization"></CardHeader>
         </Card>
       </div>
     </div>
