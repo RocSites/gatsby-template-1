@@ -110,6 +110,8 @@ const withStyles = makeStyles((theme) => ({
 
 }));
 
+kwesforms.init();
+
 const IndexPage = () => {
   const classes = withStyles();
 
@@ -149,7 +151,15 @@ const IndexPage = () => {
       </div>
     </div>
     <div id="form">
- 
+      <form class="kwes-form" action="https://kwes.io/api/foreign/forms/T2itCNhj5diHQIOukiUu">
+        <label for="name">Your Name</label>
+        <input type="text" name="name" rules="required|max:255"/>
+
+        <label for="email">Your Email</label>
+        <input type="email" name="email" rules="required|max:255"></input>
+
+        <button type="submit">Submit</button>
+      </form>
     </div>
   </Layout>
   )
