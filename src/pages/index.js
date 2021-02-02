@@ -11,9 +11,10 @@ import SEO from "../components/seo"
 import {makeStyles} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
-import Card from '@material-ui/core/Card';
+import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
-import scrollTo from 'gatsby-plugin-smoothscroll';
+import scrollTo from 'gatsby-plugin-smoothscroll'
+import kwesforms from 'kwesforms'
 
 
 const withStyles = makeStyles((theme) => ({

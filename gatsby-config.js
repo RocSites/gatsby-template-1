@@ -7,7 +7,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
-    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
