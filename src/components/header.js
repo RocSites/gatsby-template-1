@@ -50,9 +50,9 @@ const Header = () => {
           <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>
         <div className={classes.navbarWrapper}>
-          <Typography className={classes.navbarLink}>Button 1</Typography>
+          {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
-          <Typography className={classes.navbarLink}>Button 3</Typography>
+          <Typography className={classes.navbarLink}>Button 3</Typography> */}
           <Button className={classes.navbarButton}>Contact Us</Button>
         </div>
      

@@ -13,13 +13,14 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card';
 import CardHeader from "@material-ui/core/CardHeader"
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 
 const withStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     background: "rgb(253,29,29)",
-    minHeight: "70vh",
+    minHeight: "100vh",
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
   },
   // diagonal: {
@@ -58,7 +59,7 @@ const withStyles = makeStyles((theme) => ({
     textTransform: "none",
     fontSize: "1.0rem",
     '&:hover': {
-      backgroundColor: 'green',
+      backgroundColor: 'gray',
       boxShadow: 'none',
     },
   },
@@ -119,14 +120,17 @@ const IndexPage = () => {
         <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
         <Typography className={classes.landingText}>Build your website, build your business</Typography>
         <div className={classes.landingButtonWrapper}>
-          <Button className={classes.landingButton}>Let's Get Started</Button>
+          <Button 
+            onClick={() => scrollTo('#marketing')} 
+            className={classes.landingButton}>
+            Let's Get Started
+            </Button>
         </div>
       </div>
     </div>
-    {/* <div className={classes.diagonal}></div> */}
     <div className={classes.servicesWrapper}>
       <div className={classes.servicesHeaders}>
-        <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
+        <Typography id="marketing" className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
       <div className={classes.stockPhotoWrapper}>
         <Card className={classes.stockPhotoCard}>
@@ -143,7 +147,9 @@ const IndexPage = () => {
         </Card>
       </div>
     </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
+    <div>
+ 
+    </div>
   </Layout>
   )
 }
