@@ -3,7 +3,7 @@ import Layout from "../components/layout"
 import ReCAPTCHA from "react-google-recaptcha"
 
 const Contact = () => (
-  <Layout>
+  <Layout showContact={false}>
           <form 
         name="Contact Form" 
         method="POST" 

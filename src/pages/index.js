@@ -104,8 +104,47 @@ const withStyles = makeStyles((theme) => ({
     "& span":{
       fontWeight: "bold",
     }
+  },
+  formRoot: {
+    display: "flex",
+    justifyContent: "center",
+    backgroundColor: "black",
+    color: "white",
+    fontWeight: "bold",
+    "& input":{
+      borderRadius: "3px"
+    }
+  },
+  formEmail: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    margin: "10px"
+  },
+  submitButton: {
+    margin:"20px",
+    backgroundColor: "#f07539",
+    color: "white",
+    borderRadius: "35px",
+    padding:"15px",
+    paddingLeft: "25px",
+    paddingRight: "25px",
+    textTransform: "none",
+    fontSize: "1.0rem",
+    width: "190px",
+    fontWeight: "bold",
+    '&:hover': {
+      backgroundColor: 'gray',
+      boxShadow: 'none',
+    },
+  },
+  submitButtonWrapper: {
+    display: "flex",
+    justifyContent: "center"
+  },
+  captchaWrapper: {
+    margin: "10px"
   }
-
 
 }));
 
@@ -148,7 +187,7 @@ const IndexPage = () => {
         </Card>
       </div>
     </div>
-    <div id="form">
+    <div id="form" className={classes.formRoot}>
       <form 
         name="Contact Form" 
         method="POST" 
@@ -157,17 +196,21 @@ const IndexPage = () => {
         action="/thank-you"
         >
         <input type="hidden" name="form-name" value="Contact Form" />
-        <div>
+        <div className={classes.formEmail}>
           <label>Your Email:</label>
           <input type="email" name="email" />
         </div>
-        <div>
+        <div className={classes.formEmail}>
           <label>How can we help?</label>
           <textarea name="message" />
         </div>
         <br/>
-        <ReCAPTCHA sitekey="6Le9Z0YaAAAAAKmid2I2A10qNfD86kqqGI7oKOGR" />
-        <button type="submit">Send</button>
+        <div className={classes.captchaWrapper}>
+          <ReCAPTCHA sitekey="6Le9Z0YaAAAAAKmid2I2A10qNfD86kqqGI7oKOGR" />
+        </div>
+        <div className={classes.submitButtonWrapper}>
+          <button className={classes.submitButton} type="submit">Send</button>
+        </div>
       </form>
     </div>
   </Layout>

@@ -33,7 +33,7 @@ const withStyles = makeStyles((theme) => ({
     margin:"20px",
     backgroundColor: "black",
     color: "white",
-    borderRadius: "6px",
+    borderRadius: "35px",
     textTransform: "none",
     width: "150px",
     "& a": {
@@ -48,7 +48,7 @@ const withStyles = makeStyles((theme) => ({
 
 }));
 
-const Header = () => {
+const Header = (props) => {
 
   const classes = withStyles();
 
@@ -61,9 +61,12 @@ const Header = () => {
           {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography> */}
-          <Button className={classes.navbarButton}>
+          {props.showContactUs === true ? (
+            <Button className={classes.navbarButton}>
             <Link to="/contact">Contact Us</Link>
             </Button>
+          ):null}
+          
         </div>
      
     </header>
