@@ -76,15 +76,20 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "center"
   },
   servicesHeader: {
-    fontSize: "2.0rem"
+    fontSize: "2.0rem",
+    fontWeight: "bold"
   },
   servicesHeaders: {
     display: "flex",
     flexDirection: "column"
   },
+  servicesDescription: {
+    margin: "10px"
+  },
   stockPhotoWrapper: {
     display: "flex",
-    margin: "20px"
+    margin: "20px",
+    marginTop: "0px"
   },
   stockPhoto: {
     width: "55%",
@@ -123,6 +128,11 @@ const withStyles = makeStyles((theme) => ({
       marginTop: "1.5rem",
       width: "40%"
     }
+  },
+  formHeader: {
+    fontSize: "2.0rem",
+    fontWeight: "bold",
+    textAlign: "center"
   },
   formEmail: {
     display: "flex",
@@ -188,7 +198,7 @@ const IndexPage = () => {
       <div className={classes.servicesHeaders}>
         <Typography id="marketing" className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
-      <div>
+      <div className={classes.servicesDescription}>
         <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
       </div>
       <div className={classes.stockPhotoWrapper}>
@@ -215,6 +225,9 @@ const IndexPage = () => {
         action="/thank-you"
         >
         <input type="hidden" name="form-name" value="Contact Form" />
+
+          <Typography className={classes.formHeader}>Contact Us</Typography>
+
         <div className={classes.formEmail}>
           <label>Your Email:</label>
           <input type="email" name="email" />
