@@ -70,6 +70,7 @@ const withStyles = makeStyles((theme) => ({
   servicesWrapper: {
     display: "flex",
     margin: "20px",
+    marginTop: "50px",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center"
