@@ -63,7 +63,7 @@ const Header = (props) => {
           <Typography className={classes.navbarLink}>Button 3</Typography> */}
           {props.showContactUs === true ? (
             <Button className={classes.navbarButton}>
-            <Link to="/contact">Contact Us</Link>
+              Contact Us
             </Button>
           ):null}
           

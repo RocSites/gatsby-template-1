@@ -87,7 +87,7 @@ const withStyles = makeStyles((theme) => ({
     margin: "20px"
   },
   stockPhoto: {
-    width: "210px",
+    width: "55%",
     display: "flex",
     margin: "auto",
     marginTop: "10px"
@@ -112,14 +112,30 @@ const withStyles = makeStyles((theme) => ({
     color: "white",
     fontWeight: "bold",
     "& input":{
-      borderRadius: "3px"
+      borderRadius: "3px",
+      fontWeight: "normal"
+    },
+    "& textarea":{
+      fontWeight: "normal",
+      height: "100px"
+    },
+    "& form":{
+      marginTop: "1.5rem",
+      width: "40%"
     }
   },
   formEmail: {
     display: "flex",
     justifyContent: "space-between",
     flexDirection: "column",
-    margin: "10px"
+    margin: "10px",
+  },
+  formTextarea: {
+    display: "flex",
+    justifyContent: "space-between",
+    flexDirection: "column",
+    margin: "10px",
+    marginBottom: "20px"
   },
   submitButton: {
     margin:"20px",
@@ -172,10 +188,13 @@ const IndexPage = () => {
       <div className={classes.servicesHeaders}>
         <Typography id="marketing" className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
+      <div>
+        <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
+      </div>
       <div className={classes.stockPhotoWrapper}>
         <Card className={classes.stockPhotoCard}>
          <img className={classes.stockPhoto} src={ResponsiveDesign}/>
-         <CardHeader className={classes.stockPhotoCardHeader} title="Responsive Web Design"></CardHeader>
+         <CardHeader className={classes.stockPhotoCardHeader} title="Website Design Packages"></CardHeader>
         </Card>
         <Card className={classes.stockPhotoCard}>
          <img className={classes.stockPhoto} src={SeoPhoto}/>
@@ -200,11 +219,10 @@ const IndexPage = () => {
           <label>Your Email:</label>
           <input type="email" name="email" />
         </div>
-        <div className={classes.formEmail}>
+        <div className={classes.formTextarea}>
           <label>How can we help?</label>
           <textarea name="message" />
         </div>
-        <br/>
         <div className={classes.captchaWrapper}>
           <ReCAPTCHA sitekey="6Le9Z0YaAAAAAKmid2I2A10qNfD86kqqGI7oKOGR" />
         </div>
