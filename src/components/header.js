@@ -46,7 +46,8 @@ const withStyles = makeStyles((theme) => ({
     },
     "@media(max-width: 650px)":{
       width: "100px",
-      margin: "10px"
+      margin: "10px",
+      height: "35px"
     }
   }
 
