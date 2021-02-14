@@ -18,6 +18,17 @@ import CardHeader from "@material-ui/core/CardHeader"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const withStyles = makeStyles((theme) => ({
+  '@global': {
+    "@media(max-width: 400px)":{
+      body: {
+        width: "100%",
+        height: "100%",
+        margin: 0,
+        padding: 0,
+        overflowX: "hidden"
+      }
+    }
+  },
   root: {
     display: "flex",
     background: "rgb(253,29,29)",
@@ -43,6 +54,9 @@ const withStyles = makeStyles((theme) => ({
     marginTop: "5%",
     color: "white",
     fontSize: "2.0rem",
+    "@media(max-width: 960px)":{
+      fontSize: "1.25rem"
+    }
   },
   landingLogo:{
     width: "300px",
@@ -79,8 +93,11 @@ const withStyles = makeStyles((theme) => ({
   },
   servicesHeader: {
     fontSize: "2.0rem",
-    fontFamily: "Arial Rounded MT Bold",
-    textAlign: "center"
+    textAlign: "center",
+    fontWeight: "bold",
+    "@media(max-width: 650px)":{
+      fontSize: "1.9rem"
+    }
   },
   servicesHeaders: {
     display: "flex",
@@ -89,7 +106,10 @@ const withStyles = makeStyles((theme) => ({
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 95%",
     padding: "8px 0",
-    width: "60%"
+    width: "60%",
+    "@media(max-width: 650px)":{
+      width: "80%"
+    }
   },
   servicesDescription: {
     margin: "10px"
@@ -97,7 +117,10 @@ const withStyles = makeStyles((theme) => ({
   stockPhotoWrapper: {
     display: "flex",
     margin: "20px",
-    marginTop: "0px"
+    marginTop: "0px",
+    "@media(max-width: 650px)":{
+      flexDirection: "column"
+    }
   },
   stockPhoto: {
     width: "55%",
@@ -121,20 +144,42 @@ const withStyles = makeStyles((theme) => ({
   laptopMobileVectorWrapper: {
     display: "flex",
     justifyContent: "space-evenly",
-    marginBottom: "80px"
+    marginBottom: "80px",
+    "@media (max-width:960px)":{
+      flexDirection: "column"
+    }
   },
   laptopMobileHeaderWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
   },
   laptopMobileVector: {
     width: "60%",
-    marginTop: "15px"
+    marginTop: "35px",
+    "@media (max-width:960px)":{
+      margin: "auto"
+    }
   },
   laptopMobileHeader: {
-    fontSize: "4.0rem",
-    fontFamily: "Arial Rounded MT Bold",
-    lineHeight: "1.7"
+    fontSize: "3.45rem",
+    lineHeight: "1.7",
+    fontWeight: "bold",
+    "@media (max-width:960px)":{
+      textAlign: "center",
+      fontSize: "1.9rem"
+    }
+  },
+  lineSpacer: {
+    borderTop: "6px solid black",
+    width: "75%",
+    marginLeft: "auto",
+    marginRight: "auto",
+    "@media (max-width:960px)":{
+      borderTop: "3px solid black",
+      width: "60%"
+    }
   }
-
 }));
 
 
@@ -147,7 +192,7 @@ const IndexPage = () => {
     <div className={classes.root}>
       <div className={classes.landingWrapper}>
         <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
-        <Typography className={classes.landingText}>Build your website - Build your business</Typography>
+        <Typography className={classes.landingText}>Custom Website Design and Marketing Solutions</Typography>
         <div className={classes.landingButtonWrapper}>
           <Button 
             onClick={() => scrollTo('#marketing')} 
@@ -157,16 +202,17 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    <div className={classes.servicesWrapper}>
+    <div id="marketing" className={classes.servicesWrapper}>
       <div className={classes.laptopMobileVectorWrapper}>
         <div className={classes.laptopMobileHeaderWrapper}>
-          <Typography className={classes.laptopMobileHeader}>Mobile-Ready </Typography>
-          <Typography className={classes.laptopMobileHeader}>Websites</Typography>
+          <Typography className={classes.laptopMobileHeader}>Build your Website</Typography>
+          <div className={classes.lineSpacer}></div>
+          <Typography className={classes.laptopMobileHeader}>Build your Business</Typography>
         </div>
         <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
       </div>
       <div className={classes.servicesHeaders}>
-        <Typography id="marketing" className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
+        <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
       <div className={classes.servicesDescription}>
         <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>

@@ -22,7 +22,11 @@ const withStyles = makeStyles((theme) => ({
         },
         "& form":{
           marginTop: "1.5rem",
-          width: "40%"
+          width: "40%",
+          "@media(max-width: 650px)":{
+              width: "75%"
+          }
+
         }
       },
       formHeader: {
