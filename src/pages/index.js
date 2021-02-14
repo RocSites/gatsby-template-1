@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import ContactForm from "../components/contactForm"
 import Image from "../components/image"
 import LogoHorizontal from '../images/default-monochrome-white.svg'
+import LaptopMobileVector from '../images/laptop_mobile_vector_.png'
+import HighlightOrange from '../images/brush-stroke-banner-orange.png'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -19,7 +21,7 @@ const withStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     background: "rgb(253,29,29)",
-    minHeight: "100vh",
+    minHeight: "60vh",
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
   },
   // diagonal: {
@@ -77,11 +79,17 @@ const withStyles = makeStyles((theme) => ({
   },
   servicesHeader: {
     fontSize: "2.0rem",
-    fontWeight: "bold"
+    fontFamily: "Arial Rounded MT Bold",
+    textAlign: "center"
   },
   servicesHeaders: {
     display: "flex",
-    flexDirection: "column"
+    flexDirection: "column",
+    background: `url(${HighlightOrange})`,
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "100% 95%",
+    padding: "8px 0",
+    width: "60%"
   },
   servicesDescription: {
     margin: "10px"
@@ -110,6 +118,22 @@ const withStyles = makeStyles((theme) => ({
       fontWeight: "bold",
     }
   },
+  laptopMobileVectorWrapper: {
+    display: "flex",
+    justifyContent: "space-evenly",
+    marginBottom: "80px"
+  },
+  laptopMobileHeaderWrapper: {
+  },
+  laptopMobileVector: {
+    width: "60%",
+    marginTop: "15px"
+  },
+  laptopMobileHeader: {
+    fontSize: "4.0rem",
+    fontFamily: "Arial Rounded MT Bold",
+    lineHeight: "1.7"
+  }
 
 }));
 
@@ -123,7 +147,7 @@ const IndexPage = () => {
     <div className={classes.root}>
       <div className={classes.landingWrapper}>
         <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
-        <Typography className={classes.landingText}>Build your website, build your business</Typography>
+        <Typography className={classes.landingText}>Build your website - Build your business</Typography>
         <div className={classes.landingButtonWrapper}>
           <Button 
             onClick={() => scrollTo('#marketing')} 
@@ -134,6 +158,13 @@ const IndexPage = () => {
       </div>
     </div>
     <div className={classes.servicesWrapper}>
+      <div className={classes.laptopMobileVectorWrapper}>
+        <div className={classes.laptopMobileHeaderWrapper}>
+          <Typography className={classes.laptopMobileHeader}>Mobile-Ready </Typography>
+          <Typography className={classes.laptopMobileHeader}>Websites</Typography>
+        </div>
+        <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
+      </div>
       <div className={classes.servicesHeaders}>
         <Typography id="marketing" className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
       </div>
@@ -155,9 +186,7 @@ const IndexPage = () => {
         </Card>
       </div>
     </div>
-    <ContactForm>
-
-    </ContactForm>
+    <ContactForm/>
   </Layout>
   )
 }
