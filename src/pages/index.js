@@ -163,7 +163,8 @@ const withStyles = makeStyles((theme) => ({
     marginTop: "35px",
     "@media (max-width:960px)":{
       margin: "auto",
-      marginTop: "35px"
+      marginTop: "35px",
+      width: "100%"
     }
   },
   laptopMobileHeader: {
