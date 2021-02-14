@@ -34,6 +34,9 @@ const withStyles = makeStyles((theme) => ({
     background: "rgb(253,29,29)",
     minHeight: "60vh",
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
+    "@media(max-width: 650px)":{
+      height: "60vh"
+    }
   },
   // diagonal: {
   //   backgroundColor: "white",
@@ -96,7 +99,7 @@ const withStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontWeight: "bold",
     "@media(max-width: 650px)":{
-      fontSize: "1.9rem"
+      fontSize: "1.7 rem"
     }
   },
   servicesHeaders: {
@@ -108,7 +111,7 @@ const withStyles = makeStyles((theme) => ({
     padding: "8px 0",
     width: "60%",
     "@media(max-width: 650px)":{
-      width: "80%"
+      width: "100%"
     }
   },
   servicesDescription: {
@@ -146,7 +149,8 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     marginBottom: "80px",
     "@media (max-width:960px)":{
-      flexDirection: "column"
+      flexDirection: "column",
+      marginBottom: "50px"
     }
   },
   laptopMobileHeaderWrapper: {
@@ -158,7 +162,8 @@ const withStyles = makeStyles((theme) => ({
     width: "60%",
     marginTop: "35px",
     "@media (max-width:960px)":{
-      margin: "auto"
+      margin: "auto",
+      marginTop: "35px"
     }
   },
   laptopMobileHeader: {
