@@ -44,6 +44,10 @@ const withStyles = makeStyles((theme) => ({
       backgroundColor: 'gray',
       boxShadow: 'none',
     },
+    "@media(max-width: 650px)":{
+      width: "100px",
+      margin: "10px"
+    }
   }
 
 }));
