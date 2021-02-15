@@ -38,14 +38,6 @@ const withStyles = makeStyles((theme) => ({
       height: "calc(100vh - calc(100vh -100%))"
     }
   },
-  // diagonal: {
-  //   backgroundColor: "white",
-  //   height: "18vh",
-  //   transform: "skewY(-4deg)",
-  //   position: "relative",
-  //   bottom: "70px",
-  //   borderBottom: "1px solid black"
-  // },
   landingWrapper:{
     display: "flex",
     margin: "auto",
