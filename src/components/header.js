@@ -11,7 +11,10 @@ const withStyles = makeStyles((theme) => ({
   logo: {
     height: "auto",
     width: "200px",
-    margin: "20px"
+    margin: "20px",
+    // "@media(max-width: 650px)":{
+    //   display:"none"
+    // }
   },
   navbar: {
     display: "flex",
@@ -58,7 +61,7 @@ const Header = (props) => {
   return (
     <header className={classes.navbar}>
         <Link to="/"style={{color: `white`,textDecoration: `none`, display: "flex"}}>
-          {/* <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />   */}
+          <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>
         <div className={classes.navbarWrapper}>
           {/* <Typography className={classes.navbarLink}>Button 1</Typography>
