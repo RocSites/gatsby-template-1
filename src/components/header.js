@@ -45,9 +45,7 @@ const withStyles = makeStyles((theme) => ({
       boxShadow: 'none',
     },
     "@media(max-width: 650px)":{
-      maxWidth: "100px",
-      maxHeight: "50px",
-      marginTop: "35px"
+  
     }
   }
 
@@ -67,7 +65,7 @@ const Header = (props) => {
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography> */}
           {props.showContactUs === true ? (
-            <Button className={classes.navbarButton}>
+            <Button size="small" className={classes.navbarButton}>
               Contact Us
             </Button>
           ):null}
