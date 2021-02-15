@@ -32,10 +32,10 @@ const withStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     background: "rgb(253,29,29)",
-    minHeight: "60vh",
+    minHeight: "100vh",
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
     "@media(max-width: 650px)":{
-      height: "60vh"
+      height: "calc(100vh - calc(100vh -100%))"
     }
   },
   // diagonal: {

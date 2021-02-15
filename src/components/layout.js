@@ -25,7 +25,6 @@ const withStyles = makeStyles((theme) =>({
   layoutRoot: {
     display: "flex",
     flexDirection: "column",
-    minHeight: "100vh"
   },
    content:{
      flexGrow: 1
