@@ -206,14 +206,14 @@ const IndexPage = () => {
           <Typography className={classes.laptopMobileHeader}>Build your Website</Typography>
           <div className={classes.lineSpacer}></div>
           <Typography className={classes.laptopMobileHeader}>Build your Business</Typography>
+          <div className={classes.servicesDescription}>
+            <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
+          </div>
         </div>
         <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
       </div>
       <div className={classes.servicesHeaders}>
         <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
-      </div>
-      <div className={classes.servicesDescription}>
-        <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
       </div>
       <div className={classes.stockPhotoWrapper}>
         <Card className={classes.stockPhotoCard}>

@@ -64,11 +64,11 @@ const Header = (props) => {
           {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography> */}
-          {props.showContactUs === true ? (
+          {/* {props.showContactUs === true ? (
             <Button size="small" className={classes.navbarButton}>
               Contact Us
             </Button>
-          ):null}
+          ):null} */}
           
         </div>
      
