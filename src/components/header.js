@@ -48,7 +48,7 @@ const withStyles = makeStyles((theme) => ({
       boxShadow: 'none',
     },
     "@media(max-width: 650px)":{
-  
+      height: "39px"
     }
   }
 
