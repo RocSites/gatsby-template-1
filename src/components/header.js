@@ -9,8 +9,8 @@ import Typography from '@material-ui/core/Typography';
 
 const withStyles = makeStyles((theme) => ({
   logo: {
-    height: "auto",
-    width: "200px",
+    height: "39px",
+    width: "160px",
     margin: "20px",
     // "@media(max-width: 650px)":{
     //   display:"none"
@@ -48,7 +48,6 @@ const withStyles = makeStyles((theme) => ({
       boxShadow: 'none',
     },
     "@media(max-width: 650px)":{
-      height: "49px"
     }
   }
 
