@@ -66,12 +66,12 @@ const Header = (props) => {
         <div className={classes.navbarWrapper}>
           {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
-          <Typography className={classes.navbarLink}>Button 3</Typography> */}
-          {/* {props.showContactUs === true ? (
-            <Button size="small" className={classes.navbarButton}>
+          <Typography className={classes.navbarLink}>Button 3</Typography>  */}
+          {props.showContactUs === true ? (
+            <Button className={classes.navbarButton}>
               Contact Us
             </Button>
-          ):null} */}
+          ):null}
           
         </div>
      
