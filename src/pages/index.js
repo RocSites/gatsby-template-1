@@ -139,19 +139,24 @@ const withStyles = makeStyles((theme) => ({
   laptopMobileVectorWrapper: {
     display: "flex",
     justifyContent: "space-evenly",
-    marginBottom: "80px",
+    marginBottom: "20vh",
     "@media (max-width:960px)":{
       flexDirection: "column",
-      marginBottom: "50px"
+      marginBottom: "20vh"
     }
   },
   laptopMobileHeaderWrapper: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+    width: "40%",
+    minWidth: "600px",
+    "@media (max-width:960px)":{
+      width: "unset"
+    }
   },
   laptopMobileVector: {
-    width: "60%",
+    maxHeight: "400px",
     marginTop: "35px",
     "@media (max-width:960px)":{
       margin: "auto",
@@ -160,7 +165,7 @@ const withStyles = makeStyles((theme) => ({
     }
   },
   laptopMobileHeader: {
-    fontSize: "3.45rem",
+    fontSize: "3.35rem",
     lineHeight: "1.7",
     fontWeight: "bold",
     "@media (max-width:960px)":{
@@ -176,6 +181,17 @@ const withStyles = makeStyles((theme) => ({
     "@media (max-width:960px)":{
       borderTop: "3px solid black",
       width: "60%"
+    }
+  },
+  scrollToMarketing: {
+    height: "50px",
+    background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)"
+  },
+  laptopImageWrapper: {
+    display: "flex",
+    width: "60%",
+    "@media (max-width:960px)":{
+      width: "unset"
     }
   }
 }));
@@ -200,7 +216,8 @@ const IndexPage = () => {
         </div>
       </div>
     </div>
-    <div id="marketing" className={classes.servicesWrapper}>
+    <div className={classes.scrollToMarketing} id="marketing"></div>
+    <div className={classes.servicesWrapper}>
       <div className={classes.laptopMobileVectorWrapper}>
         <div className={classes.laptopMobileHeaderWrapper}>
           <Typography className={classes.laptopMobileHeader}>Build your Website</Typography>
@@ -210,7 +227,9 @@ const IndexPage = () => {
             <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
           </div>
         </div>
-        <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
+        <div className={classes.laptopImageWrapper}>
+         <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
+        </div>
       </div>
       <div className={classes.servicesHeaders}>
         <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>

@@ -12,9 +12,6 @@ const withStyles = makeStyles((theme) => ({
     height: "39px",
     width: "160px",
     margin: "20px",
-    // "@media(max-width: 650px)":{
-    //   display:"none"
-    // }
   },
   navbar: {
     display: "flex",
