@@ -166,7 +166,7 @@ const withStyles = makeStyles((theme) => ({
       margin: "auto",
       marginTop: "35px",
       width: "100%",
-      maxHeight: "none"
+      maxHeight: "180px"
     }
   },
   laptopMobileHeader: {
