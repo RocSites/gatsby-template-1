@@ -145,7 +145,8 @@ const withStyles = makeStyles((theme) => ({
       marginBottom: "100px"
     },
     "@media (max-width:650px)":{
-      marginBottom: "30px"
+      marginBottom: "30px",
+      maxHeight: "400px"
     }
   },
   laptopMobileHeaderWrapper: {
