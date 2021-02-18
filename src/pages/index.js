@@ -139,13 +139,12 @@ const withStyles = makeStyles((theme) => ({
   laptopMobileVectorWrapper: {
     display: "flex",
     justifyContent: "space-evenly",
-    marginBottom: "20vh",
+    marginBottom: "160px",
     "@media (max-width:960px)":{
       flexDirection: "column",
       marginBottom: "100px"
     },
     "@media (max-width:650px)":{
-      flexDirection: "column",
       marginBottom: "30px"
     }
   },
