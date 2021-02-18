@@ -152,7 +152,8 @@ const withStyles = makeStyles((theme) => ({
     width: "40%",
     minWidth: "600px",
     "@media (max-width:960px)":{
-      width: "unset"
+      width: "100%",
+      minWidth: "unset"
     }
   },
   laptopMobileVector: {
