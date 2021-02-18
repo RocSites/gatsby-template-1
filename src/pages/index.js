@@ -143,6 +143,10 @@ const withStyles = makeStyles((theme) => ({
     "@media (max-width:960px)":{
       flexDirection: "column",
       marginBottom: "100px"
+    },
+    "@media (max-width:650px)":{
+      flexDirection: "column",
+      marginBottom: "30px"
     }
   },
   laptopMobileHeaderWrapper: {
