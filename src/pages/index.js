@@ -84,7 +84,10 @@ const withStyles = makeStyles((theme) => ({
     marginTop: "50px",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    "@media(max-width: 650px)":{
+      marginTop: "110px"
+    }
   },
   servicesHeader: {
     fontSize: "2.0rem",

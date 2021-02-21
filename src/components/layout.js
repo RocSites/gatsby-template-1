@@ -35,7 +35,6 @@ const Layout = ({ children, props }) => {
   const classes = withStyles();
 
   const [showContact, setShowContact] = React.useState(true || props.showContact)
-  console.log(props)
   
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
