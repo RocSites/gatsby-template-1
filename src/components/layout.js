@@ -33,8 +33,10 @@ const withStyles = makeStyles((theme) =>({
 
 const Layout = ({ children, props }) => {
   const classes = withStyles();
+
   const [showContact, setShowContact] = React.useState(true || props.showContact)
   console.log(props)
+  
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -47,7 +49,10 @@ const Layout = ({ children, props }) => {
 
   return (
     <>
-      <Header showContactUs={showContact} siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header 
+        showContactUs={showContact} 
+        siteTitle={data.site.siteMetadata?.title || `Title`} 
+      />
       <div className={classes.layoutRoot}>
         <main className={classes.content}>{children}</main>
         <footer className={classes.footer}>

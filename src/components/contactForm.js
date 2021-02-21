@@ -79,7 +79,7 @@ const ContactForm = (props) => {
   const classes = withStyles();
 
   return (
-    <div id="form" className={classes.formRoot}>
+    <div id="contactForm" className={classes.formRoot}>
       <form 
         name="Contact Form" 
         method="POST" 
