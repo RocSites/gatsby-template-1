@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useEffect, useState } from "react"
 import RedPinLogo from '../images/vector/default-monochrome-white.svg'
 import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
@@ -17,7 +17,14 @@ const withStyles = makeStyles((theme) => ({
   navbar: {
     display: "flex",
     justifyContent: "space-between",
-    background: "rgb(253,29,29)",
+    background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
+  },
+  navbarScrolled: {
+    position: "fixed",
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+    top: 0,
     background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
   },
   navbarWrapper:{
@@ -55,8 +62,19 @@ const Header = (props) => {
 
   const classes = withStyles();
 
+  const [scrolled, setScrolled] = useState(false);
+  
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    offset > 200 ? setScrolled(true) : setScrolled(false);
+  }
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+  })
+
   return (
-    <header className={classes.navbar}>
+    <header className={scrolled ? classes.navbarScrolled : classes.navbar}>
         <Link to="/"style={{color: `white`,textDecoration: `none`, display: "flex"}}>
           <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>
