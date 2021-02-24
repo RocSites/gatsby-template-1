@@ -81,9 +81,13 @@ const Header = (props) => {
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography>  */}
           {props.showContactUs === true ? (
-            <a style={{textDecoration: "none"}} href="#contactForm">
-            <Button className={classes.navbarButton}>Contact Us</Button>
-            </a>
+            <Button 
+              className={classes.navbarButton}
+              onClick={() => scrollTo('#contactForm')} 
+            >
+              Contact Us
+            </Button>
+  
           ):null}
         </div>
     </header>
