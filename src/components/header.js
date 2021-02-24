@@ -5,8 +5,6 @@ import RedPinLogo from '../images/vector/default-monochrome-white.svg'
 import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
-import Typography from '@material-ui/core/Typography';
-
 
 const withStyles = makeStyles((theme) => ({
   logo: {
@@ -83,16 +81,11 @@ const Header = (props) => {
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography>  */}
           {props.showContactUs === true ? (
-            <Button 
-              className={classes.navbarButton}
-              onClick={() => scrollTo('#contactForm')} 
-            >
-              Contact Us
-            </Button>
+            <a style={{textDecoration: "none"}} href="#contactForm">
+            <Button className={classes.navbarButton}>Contact Us</Button>
+            </a>
           ):null}
-          
         </div>
-     
     </header>
   )
 }

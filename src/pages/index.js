@@ -15,7 +15,6 @@ import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
-import scrollTo from 'gatsby-plugin-smoothscroll'
 
 const withStyles = makeStyles((theme) => ({
   '@global': {
@@ -216,11 +215,12 @@ const IndexPage = () => {
         <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
         <Typography className={classes.landingText}>Custom Website Design and Marketing Solutions</Typography>
         <div className={classes.landingButtonWrapper}>
+          <a style={{textDecoration:"none"}} href="#marketing">
           <Button 
-            onClick={() => scrollTo('#marketing')} 
             className={classes.landingButton}>
             Let's Get Started
             </Button>
+            </a>
         </div>
       </div>
     </div>
