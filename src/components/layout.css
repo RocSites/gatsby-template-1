@@ -11,7 +11,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: Arial, sans-serif !important;
+  /* font family and colors being passed in as theme object from theme.js */
+  /* font-family: "Raleway" !important; */
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

@@ -1,17 +1,11 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React, { useEffect } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import {makeStyles} from "@material-ui/core/styles"
-
+import {makeStyles, createMuiTheme} from "@material-ui/core/styles"
 import Header from "./header"
 import "./layout.css"
+import "@fontsource/raleway"
+import theme from "../theme"
 
 const withStyles = makeStyles((theme) =>({
   footer: {

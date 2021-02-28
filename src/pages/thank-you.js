@@ -1,4 +1,3 @@
-import { FormatListBulleted } from "@material-ui/icons"
 import React from "react"
 import Layout from "../components/layout"
 

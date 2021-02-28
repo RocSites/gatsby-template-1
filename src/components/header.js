@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useEffect, useState } from "react"
-import RedPinLogo from '../images/vector/default-monochrome-white.svg'
+import React  from "react"
+import RedPinLogo from '../images/vector/default-monochrome-black.svg'
 import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
@@ -12,46 +12,38 @@ const withStyles = makeStyles((theme) => ({
     width: "160px",
     margin: "20px",
   },
-  navbar: {
-    display: "flex",
-    justifyContent: "space-between",
-    background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
-  },
-  navbarScrolled: {
+  navBar: {
     position: "fixed",
     display: "flex",
     justifyContent: "space-between",
     width: "100%",
     top: 0,
-    background: "linear-gradient(90deg, rgba(253,29,29,1) 0%, rgba(255,123,14,1) 48%, rgba(255,213,42,0.9640231092436975) 100%)",
+    background: "white",
+    boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
+    zIndex: "1"
   },
   navbarWrapper:{
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "row",
   },
-  navbarLink: {
-    borderBottom: "1px solid black",
-    margin: "20px",
-    paddingTop: "10px",
-  },
+  // navbarLink: {
+  //   borderBottom: "1px solid black",
+  //   margin: "20px",
+  //   paddingTop: "10px",
+  // },
   navbarButton: {
     margin:"20px",
-    backgroundColor: "black",
-    color: "white",
+    backgroundColor: theme.palette.background.paper,
+    boxShadow: `inset 0 0 0 1px #${theme.palette.action.active}`,
+    color: theme.palette.text.primary,
     borderRadius: "35px",
     textTransform: "none",
     width: "150px",
-    "& a": {
-      textDecoration: "none",
-      color: "white"
-    },
     '&:hover': {
-      backgroundColor: 'gray',
+      backgroundColor: theme.palette.action.hover,
       boxShadow: 'none',
     },
-    "@media(max-width: 650px)":{
-    }
   }
 
 }));
@@ -60,19 +52,8 @@ const Header = (props) => {
 
   const classes = withStyles();
 
-  const [scrolled, setScrolled] = useState(false);
-  
-  const handleScroll = () => {
-    const offset = window.scrollY;
-    offset > 200 ? setScrolled(true) : setScrolled(false);
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-  })
-
   return (
-    <header className={scrolled ? classes.navbarScrolled : classes.navbar}>
+    <header className={classes.navBar}>
         <Link to="/"style={{color: `white`,textDecoration: `none`, display: "flex"}}>
           <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
         </Link>

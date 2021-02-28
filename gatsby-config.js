@@ -8,6 +8,22 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-material-ui`,
+    `gatsby-theme-material-ui`,
+    {
+      resolve: `gatsby-theme-material-ui`,
+      options: {
+        webFontsConfig: {
+          fonts: {
+            google: [
+              {
+                family: `Raleway`,
+                variants: [`300`, `400`, `500`],
+              },
+            ],
+          },
+        }
+      }
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
