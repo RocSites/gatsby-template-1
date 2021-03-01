@@ -8,7 +8,6 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-smoothscroll`,
     `gatsby-plugin-material-ui`,
-    `gatsby-theme-material-ui`,
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
