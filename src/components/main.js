@@ -177,6 +177,9 @@ const withStyles = makeStyles((theme) => ({
       marginTop: "35px",
       width: "100%",
     },
+    "@media (max-width:650px)":{
+        maxHeight: "200px"
+      },
   },
   laptopMobileHeader: {
     fontSize: "3.35rem",
