@@ -12,8 +12,8 @@ const withStyles = makeStyles((theme) =>({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "black",
-    color: "white",
+    background: theme.palette.action.active,
+    color: theme.palette.text.primary,
     height: "50px",
   },
   layoutRoot: {

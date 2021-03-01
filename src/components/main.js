@@ -66,6 +66,8 @@ const withStyles = makeStyles((theme) => ({
     margin:"20px",
     backgroundColor: theme.palette.background.default,
     color: theme.palette.text.primary,
+    boxShadow: `inset 0 0 0 1px ${theme.palette.action.active}`,
+    fontWeight: "bold",
     borderRadius: "35px",
     padding:"15px",
     paddingLeft: "25px",
@@ -91,7 +93,7 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "center",
     backgroundColor: theme.palette.background.default,
     "@media(max-width: 650px)":{
-      marginTop: "110px"
+      paddingTop: "110px"
     }
   },
   servicesHeader: {
@@ -120,7 +122,7 @@ const withStyles = makeStyles((theme) => ({
   stockPhotoWrapper: {
     display: "flex",
     margin: "20px",
-    marginTop: "0px",
+    marginTop: "20px",
     "@media(max-width: 650px)":{
       flexDirection: "column"
     }

@@ -35,8 +35,9 @@ const withStyles = makeStyles((theme) => ({
   navbarButton: {
     margin:"20px",
     backgroundColor: theme.palette.background.paper,
-    boxShadow: `inset 0 0 0 1px #${theme.palette.action.active}`,
+    boxShadow: `inset 0 0 0 1px ${theme.palette.action.active}`,
     color: theme.palette.text.primary,
+    fontWeight: "bold",
     borderRadius: "35px",
     textTransform: "none",
     width: "150px",

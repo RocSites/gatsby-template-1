@@ -9,16 +9,18 @@ const withStyles = makeStyles((theme) => ({
     formRoot: {
         display: "flex",
         justifyContent: "center",
-        backgroundColor: "black",
-        color: "white",
+        backgroundColor: theme.palette.background.paper,
+        color: theme.palette.text.primary,
         fontWeight: "bold",
         "& input":{
           borderRadius: "3px",
-          fontWeight: "normal"
+          fontWeight: "normal",
+          background: theme.palette.background.default
         },
         "& textarea":{
           fontWeight: "normal",
-          height: "100px"
+          height: "100px",
+          background: theme.palette.background.default
         },
         "& form":{
           marginTop: "1.5rem",
@@ -49,8 +51,9 @@ const withStyles = makeStyles((theme) => ({
       },
       submitButton: {
         margin:"20px",
-        backgroundColor: "#f07539",
-        color: "white",
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.background.paper,
+        borderColor: theme.palette.primary.main,
         borderRadius: "35px",
         padding:"15px",
         paddingLeft: "25px",
@@ -60,7 +63,7 @@ const withStyles = makeStyles((theme) => ({
         width: "190px",
         fontWeight: "bold",
         '&:hover': {
-          backgroundColor: 'gray',
+          backgroundColor: theme.palette.action.hover,
           boxShadow: 'none',
         },
       },
