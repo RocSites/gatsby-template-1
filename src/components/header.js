@@ -51,6 +51,14 @@ const withStyles = makeStyles((theme) => ({
       backgroundColor: theme.palette.action.hover,
       boxShadow: 'none',
     },
+  },
+  socialIconLink: {
+    "@media(max-width: 600px)":{
+      display: "none"
+    }
+  },
+  socialIcon: {
+    color: theme.palette.action.hover
   }
 
 }));
@@ -77,12 +85,12 @@ const Header = (props) => {
             </Button>
   
           ):null}
-        <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
-          <FacebookIcon fontSize="large" style={{color: "black"}}/>
+        <a className={classes.socialIconLink} href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
+          <FacebookIcon fontSize="large" className={classes.socialIcon}/>
           {/* <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/> */}
         </a>
-        <a href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
-            <LinkedInIcon fontSize="large" style={{color:"black", margin:"auto"}}/>
+        <a className={classes.socialIconLink} href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
+            <LinkedInIcon fontSize="large" className={classes.socialIcon}/>
             {/* <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/> */}
         </a>
         </div>

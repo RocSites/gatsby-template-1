@@ -5,14 +5,15 @@ import {makeStyles, createMuiTheme} from "@material-ui/core/styles"
 import Header from "./header"
 import "./layout.css"
 import "@fontsource/raleway"
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import theme from "../theme"
 
 const withStyles = makeStyles((theme) =>({
   footer: {
     display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    background: theme.palette.action.active,
+    justifyContent: "space-between",
+    background: theme.palette.background.default,
     color: theme.palette.text.primary,
     height: "50px",
   },
@@ -22,6 +23,21 @@ const withStyles = makeStyles((theme) =>({
   },
    content:{
      flexGrow: 1
+   },
+   copyright: {
+     marginTop: "auto",
+     marginBottom: "auto",
+     marginLeft: "20px"
+   },
+   socialIconsFooter: {
+     "@media(min-width: 600px)":{
+       display: "none",
+     },
+     marginTop: "auto",
+     marginBottom: "auto"
+   },
+   socialIcons: {
+     color: theme.palette.action.hover,
    }
 }))
 
@@ -47,7 +63,17 @@ const Layout = (props) => {
       <div className={classes.layoutRoot}>
         <main className={classes.content}>{props.children}</main>
         <footer className={classes.footer}>
-          © {new Date().getFullYear()} RedPin Ventures LLC
+          <div className={classes.copyright}>
+            © {new Date().getFullYear()} RedPin Ventures LLC
+          </div>
+          <div className={classes.socialIconsFooter}>
+            <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
+            <FacebookIcon className={classes.socialIcons} fontSize="large"/>
+            </a>
+            <a  href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
+                <LinkedInIcon className={classes.socialIcons} fontSize="large"/>
+            </a>
+          </div>
         </footer>
       </div>
     </>
