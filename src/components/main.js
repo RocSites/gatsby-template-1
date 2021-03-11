@@ -131,9 +131,13 @@ const withStyles = makeStyles((theme) => ({
     width: "55%",
     display: "flex",
     margin: "auto",
-    marginTop: "10px"
+    marginTop: "10px",
+    marginBottom: "0px"
   },
   stockPhotoCard: {
+    display: "flex",
+    flexDirection: "column",
+    flex: 1,
     backgroundColor: theme.palette.background.paper,
     borderRadius: "15px",
     paddingTop: "0px",
@@ -252,29 +256,32 @@ const Main = () => {
           </div>
         </div>
         <div className={classes.servicesHeaders}>
-          <Typography className={classes.servicesHeader}>Website Design & Marketing Solutions</Typography>
+          <Typography className={classes.servicesHeader}>How We Can Help</Typography>
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>
-          <img className={classes.stockPhoto} src={ResponsiveDesign}/>
-          <CardHeader className={classes.stockPhotoCardHeader} title="Website Design Packages"></CardHeader>
-          <Typography className={classes.stockPhotoCardText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          </Typography>
+            <img className={classes.stockPhoto} src={ResponsiveDesign}/>
+            <CardHeader className={classes.stockPhotoCardHeader} title="Website Design Packages"></CardHeader>
+            <Typography className={classes.stockPhotoCardText}>
+            Websites are worth their weight in gold. When designed correctly, a website can become one of your most powerful marketing and sales assets.
+            </Typography>
+            <Typography className={classes.stockPhotoCardText}>
+            We will work with you every step of the way to ensure your website delivers on your needs and expectations.
+            </Typography>
           </Card>
           <Card className={classes.stockPhotoCard}>
-          <img className={classes.stockPhoto} src={SeoPhoto}/>
-          <CardHeader className={classes.stockPhotoCardHeader} title="Custom Marketing Solutions"></CardHeader>
-          <Typography className={classes.stockPhotoCardText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          </Typography>
+            <img className={classes.stockPhoto} src={MarketingPhoto}/>
+            <CardHeader className={classes.stockPhotoCardHeader} title="Digital Advertising"></CardHeader>
+            <Typography className={classes.stockPhotoCardText}>
+              Working with your marketing team shouldn’t be a 1-way street. We partner with our clients to offer solutions and strategies that meet your short- and long-term goals. The reality is that you know your customers better than we do, and that knowledge is the start to an effective marketing plan. You tell us what to say – We’ll tell you how to say it.
+            </Typography>
           </Card>
           <Card className={classes.stockPhotoCard}>
-          <img className={classes.stockPhoto} src={MarketingPhoto}/>
-          <CardHeader className={classes.stockPhotoCardHeader} title="Search Engine Optimization"></CardHeader>
-          <Typography className={classes.stockPhotoCardText}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-          </Typography>
+            <img className={classes.stockPhoto} src={SeoPhoto}/>
+            <CardHeader className={classes.stockPhotoCardHeader} title="Custom Marketing Solutions"></CardHeader>
+            <Typography className={classes.stockPhotoCardText}>
+            From writing blogs and newsletters to SEO and much more. We have a network of partners and in-house capabilities that we can leverage to create a custom solution that fits your needs, budget and goals. 
+            </Typography>
           </Card>
         </div>
       </div>

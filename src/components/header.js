@@ -5,12 +5,18 @@ import RedPinLogo from '../images/vector/default-monochrome-black.svg'
 import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import FacebookIcon from '@material-ui/icons/Facebook';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const withStyles = makeStyles((theme) => ({
   logo: {
     height: "39px",
     width: "160px",
     margin: "20px",
+    "@media(max-width: 400px)":{
+      marginLeft: "10px"
+    }
+
   },
   navBar: {
     position: "fixed",
@@ -71,6 +77,12 @@ const Header = (props) => {
             </Button>
   
           ):null}
+        <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
+          <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/>
+        </a>
+        <a href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
+            <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/>
+        </a>
         </div>
     </header>
   )
