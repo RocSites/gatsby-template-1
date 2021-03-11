@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React  from "react"
-import RedPinLogo from '../images/vector/default-monochrome-black.svg'
+import RedPinLogo from '../images/RedPin_Black_Red_Pin_cropped.png'
 import {makeStyles} from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
@@ -10,7 +10,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const withStyles = makeStyles((theme) => ({
   logo: {
-    height: "39px",
+    height: "auto",
     width: "160px",
     margin: "20px",
     "@media(max-width: 400px)":{

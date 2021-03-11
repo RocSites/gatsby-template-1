@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import ContactForm from "../components/contactForm"
 import Image from "../components/image"
-import LogoHorizontal from '../images/default-monochrome-white.svg'
+import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
 import LaptopMobileVector from '../images/laptop_mobile_vector_.png'
 import HighlightOrange from '../images/brush-stroke-banner-orange.png'
 import ResponsiveDesign from '../images/web-design.png'
@@ -46,8 +46,8 @@ const withStyles = makeStyles((theme) => ({
   },
   landingText: {
     textAlign: "center",
-    marginTop: "5%",
-    color: "white",
+    marginTop: "3%",
+    color: theme.palette.text.primary,
     fontSize: "2.0rem",
     "@media(max-width: 960px)":{
       margin: "10px",
@@ -189,6 +189,8 @@ const withStyles = makeStyles((theme) => ({
     fontSize: "3.35rem",
     lineHeight: "1.7",
     fontWeight: "bold",
+    marginLeft: "auto",
+    marginRight: "auto",
     "@media (max-width:960px)":{
       textAlign: "center",
       fontSize: "1.9rem"
@@ -273,7 +275,7 @@ const Main = () => {
             <img className={classes.stockPhoto} src={MarketingPhoto}/>
             <CardHeader className={classes.stockPhotoCardHeader} title="Digital Advertising"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
-              Working with your marketing team shouldn’t be a 1-way street. We partner with our clients to offer solutions and strategies that meet your short- and long-term goals. The reality is that you know your customers better than we do, and that knowledge is the start to an effective marketing plan. You tell us what to say – We’ll tell you how to say it.
+              Working with your marketing team shouldn’t be a one-way street. We partner with our clients to offer solutions and strategies that meet your short- and long-term goals. The reality is that you know your customers better than we do, and that knowledge is the start to an effective marketing plan. You tell us what to say – We’ll tell you how to say it.
             </Typography>
           </Card>
           <Card className={classes.stockPhotoCard}>
