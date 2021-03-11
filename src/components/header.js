@@ -10,7 +10,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const withStyles = makeStyles((theme) => ({
   logo: {
-    height: "auto",
+    height: "36px",
     width: "160px",
     margin: "20px",
     "@media(max-width: 400px)":{
