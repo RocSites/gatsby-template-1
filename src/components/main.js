@@ -174,8 +174,9 @@ const withStyles = makeStyles((theme) => ({
     }
   },
   laptopMobileVector: {
-    maxHeight: "400px",
     marginTop: "35px",
+    margin:"auto",
+    maxHeight: "600px",
     "@media (max-width:960px)":{
       margin: "auto",
       marginTop: "35px",
