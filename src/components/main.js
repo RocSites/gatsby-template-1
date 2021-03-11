@@ -5,10 +5,10 @@ import ContactForm from "../components/contactForm"
 import Image from "../components/image"
 import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
 import LaptopMobileVector from '../images/redpinMockLaptopiPhone.png'
-import HighlightOrange from '../images/brush-stroke-banner-orange.png'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
+import DartPhotoOneRedDart from '../images/shutterstock_onedartred.jpg'
 import SEO from "../components/seo"
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -31,11 +31,13 @@ const withStyles = makeStyles((theme) => ({
   },
   root: {
     display: "flex",
-    background: theme.palette.primary.main,
+    backgroundImage: `url(${DartPhotoOneRedDart})`,
+    backgroundSize: "cover",
+    backgroundPosition: "center",
     minHeight: "100vh",
-    background: theme.palette.primary.light,
     "@media(max-width: 650px)":{
-      height: "calc(100vh - calc(100vh -100%))"
+      height: "calc(100vh - calc(100vh -100%))",
+      backgroundPositionX: "68%"
     }
   },
   landingWrapper:{
@@ -86,7 +88,6 @@ const withStyles = makeStyles((theme) => ({
   },
   servicesWrapper: {
     display: "flex",
-    padding: "20px",
     paddingTop: "90px",
     flexDirection: "column",
     alignItems: "center",
@@ -97,9 +98,11 @@ const withStyles = makeStyles((theme) => ({
     }
   },
   servicesHeader: {
-    fontSize: "2.0rem",
+    fontSize: "2.5rem",
     textAlign: "center",
     fontWeight: "bold",
+    marginTop: "20px",
+    color: theme.palette.background.paper,
     "@media(max-width: 650px)":{
       fontSize: "1.7 rem"
     }
@@ -107,11 +110,11 @@ const withStyles = makeStyles((theme) => ({
   servicesHeaders: {
     display: "flex",
     flexDirection: "column",
-    background: `url(${HighlightOrange})`,
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 95%",
+    background: theme.palette.primary.main,
     padding: "8px 0",
-    width: "60%",
+    width: "100%",
     "@media(max-width: 650px)":{
       width: "100%"
     }
@@ -121,8 +124,8 @@ const withStyles = makeStyles((theme) => ({
   },
   stockPhotoWrapper: {
     display: "flex",
-    margin: "20px",
-    marginTop: "20px",
+    paddingTop: "20px",
+    background: theme.palette.primary.main,
     "@media(max-width: 650px)":{
       flexDirection: "column"
     }
@@ -154,6 +157,8 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-evenly",
     marginBottom: "160px",
+    marginLeft: "20px",
+    marginRight: "20px",
     "@media (max-width:960px)":{
       flexDirection: "column",
       marginBottom: "100px"
@@ -209,7 +214,7 @@ const withStyles = makeStyles((theme) => ({
   },
   scrollToMarketing: {
     height: "50px",
-    background: theme.palette.primary.light
+    background: theme.palette.background.default
   },
   laptopImageWrapper: {
     display: "flex",
