@@ -78,10 +78,12 @@ const Header = (props) => {
   
           ):null}
         <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
-          <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/>
+          <FacebookIcon fontSize="large" style={{color: "black"}}/>
+          {/* <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/> */}
         </a>
         <a href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
-            <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/>
+            <LinkedInIcon fontSize="large" style={{color:"black", margin:"auto"}}/>
+            {/* <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/> */}
         </a>
         </div>
     </header>

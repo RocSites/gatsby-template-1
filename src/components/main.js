@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import ContactForm from "../components/contactForm"
 import Image from "../components/image"
 import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
-import LaptopMobileVector from '../images/laptop_mobile_vector_.png'
+import LaptopMobileVector from '../images/redpinMockLaptopiPhone.png'
 import HighlightOrange from '../images/brush-stroke-banner-orange.png'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
