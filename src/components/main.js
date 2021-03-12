@@ -104,7 +104,7 @@ const withStyles = makeStyles((theme) => ({
     marginTop: "20px",
     color: theme.palette.background.paper,
     "@media(max-width: 650px)":{
-      fontSize: "1.7 rem"
+      fontSize: "1.9rem"
     }
   },
   servicesHeaders: {
