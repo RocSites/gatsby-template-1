@@ -1,21 +1,18 @@
 import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/layout"
-import ContactForm from "../components/contactForm"
-import Image from "../components/image"
+import { useStaticQuery, graphql } from "gatsby"
 import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
 import LaptopMobileVector from '../images/redpinMockLaptopiPhone.png'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
 import DartPhotoOneRedDart from '../images/shutterstock_onedartred.jpg'
-import SEO from "../components/seo"
 import {makeStyles, ThemeProvider} from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
 import scrollTo from 'gatsby-plugin-smoothscroll'
+import BackgroundImage from 'gatsby-background-image'
 
 const withStyles = makeStyles((theme) => ({
   '@global': {
@@ -31,14 +28,13 @@ const withStyles = makeStyles((theme) => ({
   },
   root: {
     display: "flex",
-    backgroundImage: `url(${DartPhotoOneRedDart})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
     minHeight: "100vh",
     "@media(max-width: 650px)":{
       height: "calc(100vh - calc(100vh -100%))",
-      backgroundPositionX: "68%"
     }
+  },
+  bannerImage: {
+    width: "100%"
   },
   landingWrapper:{
     display: "flex",
@@ -233,9 +229,40 @@ const withStyles = makeStyles((theme) => ({
 const Main = () => {
   const classes = withStyles();
 
+  const {mobileImage, desktopImage} = useStaticQuery(graphql`
+    query {
+      desktopImage: file(relativePath: { eq: "shutterstock_onedartred.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+      mobileImage: file(relativePath: { eq: "shutterstock_onedartred_cropped.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 650) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  const sources = [
+    mobileImage.childImageSharp.fluid,
+    {
+      ...desktopImage.childImageSharp.fluid,
+      media: `(min-width: 650px)`
+    }
+  ]
+
   return (
       <>
       <div className={classes.root}>
+        <BackgroundImage 
+          fluid={sources}
+          className={classes.bannerImage}
+        >
         <div className={classes.landingWrapper}>
           <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
           <Typography className={classes.landingText}>Custom Website Design and Marketing Solutions</Typography>
@@ -247,6 +274,7 @@ const Main = () => {
               </Button>
           </div>
         </div>
+        </BackgroundImage>
       </div>
       <div className={classes.scrollToMarketing} id="marketing"></div>
       <div className={classes.servicesWrapper}>
