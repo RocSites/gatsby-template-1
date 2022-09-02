@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `RedPin Ventures`,
-    description: `RedPin Ventures is a marketing and web development company focused on providing a top-tier customer experience`,
+    title: `RocSites Official Website`,
+    description: `Custome websites and marketing solution`,
     author: `Doug Kellermeyer`,
   },
   plugins: [
@@ -32,7 +32,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/redpin_just_the_pin.png`, // This path is relative to the root of the site.
+        icon: `src/images/RocSites-logo/logo.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

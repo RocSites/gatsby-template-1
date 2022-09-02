@@ -30,7 +30,11 @@
     "react-google-recaptcha": "^2.1.0",
     "react-helmet": "^6.1.0",
     "react-is": "^16.8",
+    "sharp": "^0.30.7",
     "styled-components": "^5.2.1"
+  },
+  "resolutions": {
+    "minipass": "2.7.0"
   },
   "devDependencies": {
     "prettier": "2.2.1"

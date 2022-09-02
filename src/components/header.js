@@ -1,19 +1,20 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React  from "react"
-import RedPinLogo from '../images/RedPin_Black_Red_Pin_cropped.png'
-import {makeStyles} from '@material-ui/core/styles'
+import React from "react"
+import RocSitesLogo from '../images/RocSites-logo/vector/default-monochrome.svg'
+import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import { Typography } from "@material-ui/core"
 
 const withStyles = makeStyles((theme) => ({
   logo: {
     height: "36px",
     width: "160px",
     margin: "20px",
-    "@media(max-width: 400px)":{
+    "@media(max-width: 400px)": {
       marginLeft: "10px"
     }
 
@@ -24,11 +25,9 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
     width: "100%",
     top: 0,
-    background: "white",
-    boxShadow: "1px 0 10px 0 rgb(89 98 115 / 20%)",
     zIndex: "1"
   },
-  navbarWrapper:{
+  navbarWrapper: {
     display: "flex",
     justifyContent: "flex-end",
     flexDirection: "row",
@@ -39,26 +38,26 @@ const withStyles = makeStyles((theme) => ({
   //   paddingTop: "10px",
   // },
   navbarButton: {
-    margin:"20px",
-    backgroundColor: theme.palette.background.paper,
-    boxShadow: `inset 0 0 0 1px ${theme.palette.action.active}`,
-    color: theme.palette.text.primary,
+    margin: "auto 50px auto 0px",
     fontWeight: "bold",
-    borderRadius: "35px",
     textTransform: "none",
-    width: "150px",
+    color: "white",
     '&:hover': {
-      backgroundColor: theme.palette.action.hover,
+      backgroundColor: "black",
       boxShadow: 'none',
+      cursor: "pointer"
+    },
+    "@media(max-width: 960px)": {
+      margin: "30px 10px 0px 10px",
     },
   },
   socialIconLink: {
-    "@media(max-width: 600px)":{
+    "@media(max-width: 600px)": {
       display: "none"
     }
   },
   socialIcon: {
-    color: theme.palette.action.hover
+    color: "white"
   }
 
 }));
@@ -69,31 +68,38 @@ const Header = (props) => {
 
   return (
     <header className={classes.navBar}>
-        <Link to="/"style={{color: `white`,textDecoration: `none`, display: "flex"}}>
-          <img className={classes.logo} src={RedPinLogo} alt="redpin ventures logo" />  
-        </Link>
-        <div className={classes.navbarWrapper}>
-          {/* <Typography className={classes.navbarLink}>Button 1</Typography>
+      <Link to="/" style={{ color: `white`, textDecoration: `none`, display: "flex" }}>
+        <img className={classes.logo} src={RocSitesLogo} alt="rocsites logo" />
+      </Link>
+      <div className={classes.navbarWrapper}>
+        {/* <Typography className={classes.navbarLink}>Button 1</Typography>
           <Typography className={classes.navbarLink}>Button 2</Typography>
           <Typography className={classes.navbarLink}>Button 3</Typography>  */}
-          {props.showContactUs === true ? (
-            <Button 
-              className={classes.navbarButton}
-              onClick={() => scrollTo('#contactForm')} 
-            >
-              Contact Us
-            </Button>
-  
-          ):null}
-        <a className={classes.socialIconLink} href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
+        {props.showContactUs === true ? (
+          <Typography
+            className={classes.navbarButton}
+            onClick={() => scrollTo('#contactForm')}
+          >
+            Contact Us
+          </Typography>
+
+        ) : null}
+
+        <Typography
+          className={classes.navbarButton}
+          onClick={() => scrollTo('#contactForm')}
+        >
+          Services
+        </Typography>
+        {/* <a className={classes.socialIconLink} href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
           <FacebookIcon fontSize="large" className={classes.socialIcon}/>
-          {/* <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/> */}
-        </a>
-        <a className={classes.socialIconLink} href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
+          <FacebookIcon fontSize="large" style={{color: "rgb(20 82 147)"}}/>
+        </a> */}
+        {/* <a className={classes.socialIconLink} href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
             <LinkedInIcon fontSize="large" className={classes.socialIcon}/>
-            {/* <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/> */}
-        </a>
-        </div>
+            <LinkedInIcon fontSize="large" style={{color:"rgb(32 118 210)", margin:"auto"}}/>
+        </a> */}
+      </div>
     </header>
   )
 }

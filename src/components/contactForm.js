@@ -12,15 +12,14 @@ const withStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.background.paper,
         color: theme.palette.text.primary,
         fontWeight: "bold",
+        marginTop: "100px",
         "& input":{
           borderRadius: "3px",
-          fontWeight: "normal",
-          background: theme.palette.background.default
+          fontWeight: "normal"
         },
         "& textarea":{
           fontWeight: "normal",
           height: "100px",
-          background: theme.palette.background.default
         },
         "& form":{
           marginTop: "1.5rem",
@@ -52,7 +51,7 @@ const withStyles = makeStyles((theme) => ({
       submitButton: {
         margin:"20px",
         backgroundColor: theme.palette.primary.main,
-        color: theme.palette.background.paper,
+        color: "black",
         borderColor: theme.palette.primary.main,
         borderRadius: "35px",
         padding:"15px",
@@ -63,7 +62,8 @@ const withStyles = makeStyles((theme) => ({
         width: "190px",
         fontWeight: "bold",
         '&:hover': {
-          backgroundColor: theme.palette.action.hover,
+          backgroundColor: "white",
+          cursor: "pointer",
           boxShadow: 'none',
         },
       },
@@ -87,12 +87,12 @@ const ContactForm = (props) => {
         name="Contact Form" 
         method="POST" 
         data-netlify="true" 
-        data-netlify-recaptcha="true"
+        data-netlify-recaptcha="false"
         action="/thank-you"
         >
         <input type="hidden" name="form-name" value="Contact Form" />
 
-          <Typography className={classes.formHeader}>Contact Us</Typography>
+          <Typography className={classes.formHeader}>Let's Connect</Typography>
 
         <div className={classes.formEmail}>
           <label>Your Email:</label>
@@ -102,9 +102,9 @@ const ContactForm = (props) => {
           <label>How can we help?</label>
           <textarea name="message" />
         </div>
-        <div className={classes.captchaWrapper}>
+        {/* <div className={classes.captchaWrapper}>
           <ReCAPTCHA sitekey="6Le9Z0YaAAAAAKmid2I2A10qNfD86kqqGI7oKOGR" />
-        </div>
+        </div> */}
         <div className={classes.submitButtonWrapper}>
           <button className={classes.submitButton} type="submit">Send</button>
         </div>

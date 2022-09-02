@@ -26,7 +26,7 @@ const IndexPage = () => {
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-      <SEO title="Home" />
+      <SEO title="RocSites" />
         <Main/>
         <ContactForm/>
     </Layout>

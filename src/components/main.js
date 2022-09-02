@@ -1,12 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
-import LaptopMobileVector from '../images/redpinMockLaptopiPhone.png'
+import PhoneFloating from '../images/neil-soni-6wdRuK7bVTE-unsplash.jpg'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
 import DartPhotoOneRedDart from '../images/shutterstock_onedartred.jpg'
-import {makeStyles, ThemeProvider} from '@material-ui/core/styles'
+import { makeStyles, ThemeProvider } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
@@ -16,7 +16,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 const withStyles = makeStyles((theme) => ({
   '@global': {
-    "@media(max-width: 400px)":{
+    "@media(max-width: 400px)": {
       body: {
         width: "100%",
         height: "100%",
@@ -29,14 +29,38 @@ const withStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     minHeight: "100vh",
-    "@media(max-width: 650px)":{
+    // background:"radial-gradient(at left bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0))",
+    background: "black",
+    "@media(max-width: 650px)": {
       height: "calc(100vh - calc(100vh -100%))",
     }
   },
   bannerImage: {
     width: "100%"
   },
-  landingWrapper:{
+  bannerText: {
+    color: "white",
+    fontSize: "5rem",
+    "@media(max-width: 960px)": {
+      fontSize: "3rem",
+    },
+  },
+  bannerTextImpactWord: {
+    color: "#88df95",
+    fontSize: "5rem",
+    fontWeight: "bold",
+    "@media(max-width: 960px)": {
+      fontSize: "3rem",
+    },
+  },
+  bannerTextWrapper: {
+    display: "flex",
+    margin: "auto",
+    "@media(max-width: 960px)": {
+      flexDirection: "column"
+    },
+  },
+  landingWrapper: {
     display: "flex",
     margin: "auto",
     marginTop: "150px",
@@ -47,27 +71,27 @@ const withStyles = makeStyles((theme) => ({
     marginTop: "3%",
     color: theme.palette.text.primary,
     fontSize: "2.0rem",
-    "@media(max-width: 960px)":{
+    "@media(max-width: 960px)": {
       margin: "10px",
       marginTop: "5%"
     },
-    "@media(max-width:650px)":{
+    "@media(max-width:650px)": {
       fontSize: "1.25rem",
     }
   },
-  landingLogo:{
+  landingLogo: {
     width: "300px",
     margin: "auto",
     marginTop: "10%"
   },
   landingButton: {
-    margin:"20px",
+    margin: "20px",
     backgroundColor: theme.palette.background.default,
     color: theme.palette.text.primary,
     boxShadow: `inset 0 0 0 1px ${theme.palette.action.active}`,
     fontWeight: "bold",
     borderRadius: "35px",
-    padding:"15px",
+    padding: "15px",
     paddingLeft: "25px",
     paddingRight: "25px",
     textTransform: "none",
@@ -88,8 +112,8 @@ const withStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: theme.palette.background.default,
-    "@media(max-width: 650px)":{
+    backgroundColor: "rgb(27 27 27)",
+    "@media(max-width: 650px)": {
       paddingTop: "110px"
     }
   },
@@ -98,8 +122,8 @@ const withStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontWeight: "bold",
     marginTop: "20px",
-    color: theme.palette.background.paper,
-    "@media(max-width: 650px)":{
+    color: "black",
+    "@media(max-width: 650px)": {
       fontSize: "1.9rem"
     }
   },
@@ -108,21 +132,21 @@ const withStyles = makeStyles((theme) => ({
     flexDirection: "column",
     backgroundRepeat: "no-repeat",
     backgroundSize: "100% 95%",
-    background: theme.palette.primary.main,
+    background: "white",
     padding: "8px 0",
     width: "100%",
-    "@media(max-width: 650px)":{
+    "@media(max-width: 650px)": {
       width: "100%"
     }
   },
   servicesDescription: {
-    margin: "10px"
+    margin: "10px 0 10px 0"
   },
   stockPhotoWrapper: {
     display: "flex",
     paddingTop: "20px",
-    background: theme.palette.primary.main,
-    "@media(max-width: 650px)":{
+    background: "white",
+    "@media(max-width: 650px)": {
       flexDirection: "column"
     }
   },
@@ -137,15 +161,15 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     flex: 1,
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "rgb(27 27 27)",
     borderRadius: "15px",
     paddingTop: "0px",
-    margin:"20px"
+    margin: "20px"
   },
   stockPhotoCardHeader: {
-    color: theme.palette.text.primary,
+    color: "white",
     textAlign: "center",
-    "& span":{
+    "& span": {
       fontWeight: "bold",
     }
   },
@@ -155,11 +179,12 @@ const withStyles = makeStyles((theme) => ({
     marginBottom: "160px",
     marginLeft: "20px",
     marginRight: "20px",
-    "@media (max-width:960px)":{
+    color: "white",
+    "@media (max-width:960px)": {
       flexDirection: "column",
       marginBottom: "100px"
     },
-    "@media (max-width:650px)":{
+    "@media (max-width:650px)": {
       marginBottom: "50px",
     }
   },
@@ -169,59 +194,61 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "center",
     width: "40%",
     minWidth: "600px",
-    "@media (max-width:960px)":{
+    "@media (max-width:960px)": {
       width: "100%",
       minWidth: "unset"
     }
   },
+  marketingText: {
+    fontSize: "1.25rem"
+  },
+  marketingTextDivider: {
+    margin: "15px"
+  },
   laptopMobileVector: {
     marginTop: "35px",
-    margin:"auto",
-    maxHeight: "600px",
-    "@media (max-width:960px)":{
+    margin: "auto",
+    maxHeight: "550px",
+    borderRadius: "35px",
+    "@media (max-width:960px)": {
       margin: "auto",
       marginTop: "35px",
       width: "100%",
     },
-    "@media (max-width:650px)":{
-        maxHeight: "200px"
-      },
   },
   laptopMobileHeader: {
     fontSize: "3.35rem",
     lineHeight: "1.7",
     fontWeight: "bold",
-    marginLeft: "auto",
-    marginRight: "auto",
-    "@media (max-width:960px)":{
+    "@media (max-width:960px)": {
       textAlign: "center",
       fontSize: "1.9rem"
     }
   },
   lineSpacer: {
-    borderTop: "6px solid black",
+    borderTop: "3px solid #88df95",
     width: "75%",
-    marginLeft: "auto",
-    marginRight: "auto",
-    "@media (max-width:960px)":{
-      borderTop: "3px solid black",
-      width: "60%"
+    "@media (max-width:960px)": {
+      borderTop: "3px solid #88df95",
+      width: "60%",
+      margin: "auto"
     }
   },
   scrollToMarketing: {
     height: "50px",
-    background: theme.palette.background.default
+    background: "black"
   },
   laptopImageWrapper: {
     display: "flex",
-    width: "60%",
-    "@media (max-width:960px)":{
+    width: "40%",
+    "@media (max-width:960px)": {
       width: "unset"
     }
   },
   stockPhotoCardText: {
-      margin: "25px",
-      marginTop: "0px"
+    margin: "25px",
+    marginTop: "0px",
+    color: "white"
   }
 }));
 
@@ -229,16 +256,16 @@ const withStyles = makeStyles((theme) => ({
 const Main = () => {
   const classes = withStyles();
 
-  const {mobileImage, desktopImage} = useStaticQuery(graphql`
+  const { mobileImage, desktopImage } = useStaticQuery(graphql`
     query {
-      desktopImage: file(relativePath: { eq: "shutterstock_onedartred.jpg" }) {
+      desktopImage: file(relativePath: { eq: "mia-baker-ctRgcY-lY8I-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mobileImage: file(relativePath: { eq: "shutterstock_onedartred_cropped.jpg" }) {
+      mobileImage: file(relativePath: { eq: "omid-armin-ztvxSNFJih0-unsplash.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 650) {
             ...GatsbyImageSharpFluid
@@ -257,24 +284,18 @@ const Main = () => {
   ]
 
   return (
-      <>
+    <>
       <div className={classes.root}>
-        <BackgroundImage 
+        {/* <BackgroundImage 
           fluid={sources}
           className={classes.bannerImage}
         >
         <div className={classes.landingWrapper}>
-          <img className={classes.landingLogo} alt="RedPin logo" src={LogoHorizontal}/>
-          <Typography className={classes.landingText}>Custom Website Design and Marketing Solutions</Typography>
-          <div className={classes.landingButtonWrapper}>
-            <Button 
-              onClick={() => scrollTo('#marketing')} 
-              className={classes.landingButton}>
-              Let's Get Started
-              </Button>
-          </div>
         </div>
-        </BackgroundImage>
+        </BackgroundImage> */}
+        <div className={classes.bannerTextWrapper}>
+          <Typography className={classes.bannerText}>Let's Build </Typography> <Typography className={classes.bannerTextImpactWord}>&nbsp;Together</Typography>
+          </div>
       </div>
       <div className={classes.scrollToMarketing} id="marketing"></div>
       <div className={classes.servicesWrapper}>
@@ -284,39 +305,41 @@ const Main = () => {
             <div className={classes.lineSpacer}></div>
             <Typography className={classes.laptopMobileHeader}>Build your Business</Typography>
             <div className={classes.servicesDescription}>
-              <Typography>Whether you're looking for a custom, <b>mobile-ready</b> website or to elevate your company's <b>online presence</b>, we can help you take your business to the <b>next level.</b></Typography>
+              <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b>.</Typography>
+              <div className={classes.marketingTextDivider}></div>
+              <Typography className={classes.marketingText}>Take your business to the <b>next level.</b></Typography>
             </div>
           </div>
           <div className={classes.laptopImageWrapper}>
-          <img className={classes.laptopMobileVector} alt="laptop mock logo" src={LaptopMobileVector}/>
+            <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div>
         </div>
         <div className={classes.servicesHeaders}>
-          <Typography className={classes.servicesHeader}>How We Can Help</Typography>
+          <Typography className={classes.servicesHeader}>What we do</Typography>
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>
-            <img className={classes.stockPhoto} src={ResponsiveDesign}/>
+            <img className={classes.stockPhoto} src={ResponsiveDesign} alt="computer graphic image"/>
             <CardHeader className={classes.stockPhotoCardHeader} title="Website Design Packages"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
-            Websites are worth their weight in gold. When designed correctly, a website can become one of your most powerful marketing and sales assets.
+              Every business is <b>different</b>. We will build something that not only looks great, but delivers <b>results</b>.
             </Typography>
-            <Typography className={classes.stockPhotoCardText}>
-            We will work with you every step of the way to ensure your website delivers on your needs and expectations.
-            </Typography>
+            {/* <Typography className={classes.stockPhotoCardText}>
+              We will work with you every step of the way to ensure your website delivers on your needs and expectations.
+            </Typography> */}
           </Card>
           <Card className={classes.stockPhotoCard}>
-            <img className={classes.stockPhoto} src={MarketingPhoto}/>
+            <img className={classes.stockPhoto} alt="computer monitor graphic" src={MarketingPhoto} />
             <CardHeader className={classes.stockPhotoCardHeader} title="Digital Advertising"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
-              Working with your marketing team shouldn’t be a one-way street. We partner with our clients to offer solutions and strategies that meet your short- and long-term goals. The reality is that you know your customers better than we do, and that knowledge is the start to an effective marketing plan. You tell us what to say – We’ll tell you how to say it.
+              Get your message in front of the right audience. Less noise, more <b>impact</b>. 
             </Typography>
           </Card>
           <Card className={classes.stockPhotoCard}>
-            <img className={classes.stockPhoto} src={SeoPhoto}/>
+            <img className={classes.stockPhoto} alt="seo logo on a cloud with arrows" src={SeoPhoto} />
             <CardHeader className={classes.stockPhotoCardHeader} title="Custom Marketing Solutions"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
-            From writing blogs and newsletters to SEO and much more. We have a network of partners and in-house capabilities that we can leverage to create a custom solution that fits your needs, budget and goals. 
+              Ensure your business gets the attention it deserves.
             </Typography>
           </Card>
         </div>

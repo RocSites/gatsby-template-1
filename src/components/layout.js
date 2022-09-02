@@ -14,7 +14,7 @@ const withStyles = makeStyles((theme) =>({
     display: "flex",
     justifyContent: "space-between",
     background: theme.palette.background.default,
-    color: theme.palette.text.primary,
+    color: "black",
     height: "50px",
   },
   layoutRoot: {
@@ -27,7 +27,8 @@ const withStyles = makeStyles((theme) =>({
    copyright: {
      marginTop: "auto",
      marginBottom: "auto",
-     marginLeft: "20px"
+     marginLeft: "20px",
+     fontWeight: "bold"
    },
    socialIconsFooter: {
      "@media(min-width: 600px)":{
@@ -64,16 +65,16 @@ const Layout = (props) => {
         <main className={classes.content}>{props.children}</main>
         <footer className={classes.footer}>
           <div className={classes.copyright}>
-            © {new Date().getFullYear()} RedPin Ventures LLC
+            © {new Date().getFullYear()} RocSites
           </div>
-          <div className={classes.socialIconsFooter}>
+          {/* <div className={classes.socialIconsFooter}>
             <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
             <FacebookIcon className={classes.socialIcons} fontSize="large"/>
             </a>
             <a  href="https://www.linkedin.com/company/redpin-ventures/" style={{margin:"auto", marginRight: "20px"}}>
                 <LinkedInIcon className={classes.socialIcons} fontSize="large"/>
             </a>
-          </div>
+          </div> */}
         </footer>
       </div>
     </>
