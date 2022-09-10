@@ -84,13 +84,13 @@ const ContactForm = (props) => {
   return (
     <div id="contactForm" className={classes.formRoot}>
       <form 
-        name="Contact Form" 
+        name="Rocsites Contact Form" 
         method="POST" 
         data-netlify="true" 
-        data-netlify-recaptcha="false"
+        data-netlify-recaptcha="true"
         action="/thank-you"
         >
-        <input type="hidden" name="form-name" value="Contact Form" />
+        <input type="hidden" name="form-name" value="Rocsites Contact Form" />
 
           <Typography className={classes.formHeader}>Let's Connect</Typography>
 
@@ -102,9 +102,9 @@ const ContactForm = (props) => {
           <label>How can we help?</label>
           <textarea name="message" />
         </div>
-        {/* <div className={classes.captchaWrapper}>
-          <ReCAPTCHA sitekey="6Le9Z0YaAAAAAKmid2I2A10qNfD86kqqGI7oKOGR" />
-        </div> */}
+        <div className={classes.captchaWrapper}>
+          <ReCAPTCHA sitekey="6LevMeshAAAAAJ3QDvN0h3-gystjzxxMGZj094DL" />
+        </div>
         <div className={classes.submitButtonWrapper}>
           <button className={classes.submitButton} type="submit">Send</button>
         </div>
