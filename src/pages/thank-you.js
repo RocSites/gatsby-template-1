@@ -7,7 +7,8 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     minHeight: "100vh",
     flexDirection: "column",
-    justifyContent: "flex-start"
+    justifyContent: "flex-start",
+    backgroundColor: "black"
   },
   thankYouMessage:{
     display: "flex",
@@ -21,7 +22,8 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "center",
     marginTop: "130px",
     marginLeft: "20px",
-    marginRight: "20px"
+    marginRight: "20px",
+    color: "white"
   }
 
 }));
