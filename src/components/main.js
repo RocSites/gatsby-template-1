@@ -2,6 +2,9 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import LogoHorizontal from '../images/RedPin_Black_Red_Pin_cropped.png'
 import PhoneFloating from '../images/neil-soni-6wdRuK7bVTE-unsplash.jpg'
+import BangzPhoto from '../images/BangzScreenshot.png'
+import PayviewPhoto from '../images/payviewScreenShoot2.png'
+import PhPoolsPhoto from '../images/phPoolsSpaScreenshot.png'
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -142,6 +145,30 @@ const withStyles = makeStyles((theme) => ({
   servicesDescription: {
     margin: "10px 0 10px 0"
   },
+
+  clientsHeader: {
+    fontSize: "2.5rem",
+    textAlign: "center",
+    fontWeight: "bold",
+    marginTop: "20px",
+    color: "white",
+    "@media(max-width: 650px)": {
+      fontSize: "1.9rem"
+    }
+  },
+
+  clientsWrapper: {
+    display: "flex",
+    width: "100%",
+    color: "white",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#000000",
+    "@media(max-width: 650px)": {
+      paddingTop: "110px"
+    }
+  },
   stockPhotoWrapper: {
     display: "flex",
     paddingTop: "20px",
@@ -210,6 +237,7 @@ const withStyles = makeStyles((theme) => ({
     margin: "auto",
     maxHeight: "550px",
     borderRadius: "35px",
+    maxWidth: "50%",
     "@media (max-width:960px)": {
       margin: "auto",
       marginTop: "35px",
@@ -249,6 +277,35 @@ const withStyles = makeStyles((theme) => ({
     margin: "25px",
     marginTop: "0px",
     color: "white"
+  },
+  clientPhoto: {
+    width: "100%",
+  },
+  clientSubwrapper: {
+    display: "flex",
+    margin: "auto",
+    margin: "0 10%"
+  },
+  clientDescription: {
+    margin: "40px 0"
+  },
+  liveSiteButton: {
+    textTransform: "none",
+    backgroundColor: "#ffffff",
+    borderRadius: "35px",
+    display: "flex",
+    width: "50%",
+    margin: "10px auto 30px auto",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.main
+    }
+  },
+  clientTitle: {
+    marginTop: "50px",
+    fontSize: "1.5rem",
+    "@media (max-width:600px)": {
+      textAlign: "center",
+    }
   }
 }));
 
@@ -295,7 +352,7 @@ const Main = () => {
         </BackgroundImage> */}
         <div className={classes.bannerTextWrapper}>
           <Typography className={classes.bannerText}>Let's Build </Typography> <Typography className={classes.bannerTextImpactWord}>&nbsp;Together</Typography>
-          </div>
+        </div>
       </div>
       <div className={classes.scrollToMarketing} id="marketing"></div>
       <div className={classes.servicesWrapper}>
@@ -314,12 +371,66 @@ const Main = () => {
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div>
         </div>
+
+        <div className={classes.clientsWrapper}>
+          <Typography className={classes.clientsHeader}>Clients & Recent Projects</Typography>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Payview - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                A real estate application that provides accurate and secure proof of
+                funds reports.
+              </Typography>
+              <a target="_blank" href="https://www.mypayview.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={PayviewPhoto} alt="" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://www.mypayview.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>PH Pool & Spa - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                A website built for a local Rochester pool company.
+              </Typography>
+              <a
+                href="https://www.phpoolandspas.com/"
+                class="image featured"
+                target="_blank"
+              ><img className={classes.clientPhoto} src={PhPoolsPhoto} alt=""
+                /></a>
+
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://www.phpoolandspas.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Bangz Salon - Penfield, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                A website built for a local Rochester salon.
+              </Typography>
+              <a target="_blank" href="https://www.bangzsalon.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={BangzPhoto} alt=""
+                /></a>
+
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://www.bangzsalon.com/">Live Site</Button>
+            </section>
+          </div>
+        </div>
         <div className={classes.servicesHeaders}>
           <Typography className={classes.servicesHeader}>What we do</Typography>
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>
-            <img className={classes.stockPhoto} src={ResponsiveDesign} alt="computer graphic image"/>
+            <img className={classes.stockPhoto} src={ResponsiveDesign} alt="computer graphic image" />
             <CardHeader className={classes.stockPhotoCardHeader} title="Website Design Packages"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
               Every business is <b>different</b>. We will build something that not only looks great, but delivers <b>results</b>.
@@ -332,7 +443,7 @@ const Main = () => {
             <img className={classes.stockPhoto} alt="computer monitor graphic" src={MarketingPhoto} />
             <CardHeader className={classes.stockPhotoCardHeader} title="Digital Advertising"></CardHeader>
             <Typography className={classes.stockPhotoCardText}>
-              Get your message in front of the right audience. Less noise, more <b>impact</b>. 
+              Get your message in front of the right audience. Less noise, more <b>impact</b>.
             </Typography>
           </Card>
           <Card className={classes.stockPhotoCard}>

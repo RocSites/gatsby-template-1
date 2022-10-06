@@ -14,8 +14,12 @@ const withStyles = makeStyles((theme) => ({
     height: "36px",
     width: "160px",
     margin: "20px",
+    fill: "currentColor",
     "@media(max-width: 400px)": {
       marginLeft: "10px"
+    },
+    "& path": {
+      fill: "#555555"
     }
 
   },
@@ -49,6 +53,7 @@ const withStyles = makeStyles((theme) => ({
     },
     "@media(max-width: 960px)": {
       margin: "30px 10px 0px 10px",
+      width: "max-content"
     },
   },
   socialIconLink: {
