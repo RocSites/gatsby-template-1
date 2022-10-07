@@ -64,6 +64,7 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     margin: "auto",
     flexDirection: "column",
+    // backgroundImage: "url(../images/yassine-khalfalli-tftTUaQ8iNc-unsplash.jpg)",
     "@media(max-width: 960px)": {
       flexDirection: "column"
     },
@@ -116,7 +117,6 @@ const withStyles = makeStyles((theme) => ({
   },
   servicesWrapper: {
     display: "flex",
-    paddingTop: "90px",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
@@ -211,6 +211,7 @@ const withStyles = makeStyles((theme) => ({
     marginBottom: "160px",
     marginLeft: "20px",
     marginRight: "20px",
+    height: "600px",
     color: "white",
     "@media (max-width:960px)": {
       flexDirection: "column",
@@ -223,14 +224,18 @@ const withStyles = makeStyles((theme) => ({
   laptopMobileHeaderWrapper: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center",
+    marginTop: "70px",
     width: "40%",
     minWidth: "600px",
     textAlign: "center",
     "@media (max-width:960px)": {
       width: "100%",
-      minWidth: "unset"
-    }
+      minWidth: "unset",
+      marginTop: "-210px"
+    },
+    "@media (max-width:600px)": {
+      marginTop: "-280px"
+    },
   },
   marketingText: {
     fontSize: "1.25rem"
@@ -285,6 +290,7 @@ const withStyles = makeStyles((theme) => ({
   },
   clientPhoto: {
     width: "100%",
+    borderRadius: "25px"
   },
   clientSubwrapper: {
     display: "flex",
@@ -320,14 +326,14 @@ const Main = () => {
 
   const { mobileImage, desktopImage } = useStaticQuery(graphql`
     query {
-      desktopImage: file(relativePath: { eq: "mia-baker-ctRgcY-lY8I-unsplash.jpg" }) {
+      desktopImage: file(relativePath: { eq: "yassine-khalfalli-tftTUaQ8iNc-unsplash-BW.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid
           }
         }
       }
-      mobileImage: file(relativePath: { eq: "omid-armin-ztvxSNFJih0-unsplash.jpg" }) {
+      mobileImage: file(relativePath: { eq: "yassine-khalfalli-tftTUaQ8iNc-unsplash-BW.jpg" }) {
         childImageSharp {
           fluid(maxWidth: 650) {
             ...GatsbyImageSharpFluid
@@ -348,13 +354,6 @@ const Main = () => {
   return (
     <>
       <div className={classes.root}>
-        {/* <BackgroundImage 
-          fluid={sources}
-          className={classes.bannerImage}
-        >
-        <div className={classes.landingWrapper}>
-        </div>
-        </BackgroundImage> */}
         <div className={classes.bannerTextWrapper}>
           <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
           <Typography className={classes.bannerTextImpactWord}>Together</Typography>
@@ -362,18 +361,25 @@ const Main = () => {
       </div>
       <div className={classes.scrollToMarketing} id="marketing"></div>
       <div className={classes.servicesWrapper}>
-        <div className={classes.laptopMobileVectorWrapper}>
-          <div className={classes.laptopMobileHeaderWrapper}>
-            <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
-            <div className={classes.lineSpacer}></div>
-            <div className={classes.servicesDescription}>
-              <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b> and take your business to the <b>next level</b>.</Typography>
+        <BackgroundImage
+          fluid={sources}
+          className={classes.bannerImage}
+        >
+          <div className={classes.laptopMobileVectorWrapper}>
+
+            <div className={classes.laptopMobileHeaderWrapper}>
+              <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
+              <div className={classes.lineSpacer}></div>
+              <div className={classes.servicesDescription}>
+                <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b> and take your business to the <b>next level</b>.</Typography>
+              </div>
             </div>
-          </div>
-          {/* <div className={classes.laptopImageWrapper}>
+            {/* <div className={classes.laptopImageWrapper}>
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div> */}
-        </div>
+          </div>
+        </BackgroundImage>
+
 
         <div className={classes.clientsWrapper}>
           <Typography className={classes.clientsHeader}>Recent Projects</Typography>
