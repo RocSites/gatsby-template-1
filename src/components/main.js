@@ -121,9 +121,6 @@ const withStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     backgroundColor: "rgb(27 27 27)",
-    "@media(max-width: 650px)": {
-      paddingTop: "110px"
-    }
   },
   servicesHeader: {
     fontSize: "2.5rem",
