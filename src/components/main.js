@@ -47,11 +47,15 @@ const withStyles = makeStyles((theme) => ({
     "@media(max-width: 960px)": {
       fontSize: "3rem",
     },
+    "@media(max-width: 600px)": {
+      textAlign: "center",
+    },
   },
   bannerTextImpactWord: {
     color: "#88df95",
     fontSize: "5rem",
     fontWeight: "bold",
+    textAlign: "center",
     "@media(max-width: 960px)": {
       fontSize: "3rem",
     },
@@ -59,6 +63,7 @@ const withStyles = makeStyles((theme) => ({
   bannerTextWrapper: {
     display: "flex",
     margin: "auto",
+    flexDirection: "column",
     "@media(max-width: 960px)": {
       flexDirection: "column"
     },
@@ -147,7 +152,7 @@ const withStyles = makeStyles((theme) => ({
   },
 
   clientsHeader: {
-    fontSize: "2.5rem",
+    fontSize: "3.35rem",
     textAlign: "center",
     fontWeight: "bold",
     marginTop: "20px",
@@ -221,6 +226,7 @@ const withStyles = makeStyles((theme) => ({
     justifyContent: "center",
     width: "40%",
     minWidth: "600px",
+    textAlign: "center",
     "@media (max-width:960px)": {
       width: "100%",
       minWidth: "unset"
@@ -255,10 +261,9 @@ const withStyles = makeStyles((theme) => ({
   },
   lineSpacer: {
     borderTop: "3px solid #88df95",
-    width: "75%",
+    width: "100%",
     "@media (max-width:960px)": {
       borderTop: "3px solid #88df95",
-      width: "60%",
       margin: "auto"
     }
   },
@@ -351,29 +356,27 @@ const Main = () => {
         </div>
         </BackgroundImage> */}
         <div className={classes.bannerTextWrapper}>
-          <Typography className={classes.bannerText}>Let's Build </Typography> <Typography className={classes.bannerTextImpactWord}>&nbsp;Together</Typography>
+          <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
+          <Typography className={classes.bannerTextImpactWord}>Together</Typography>
         </div>
       </div>
       <div className={classes.scrollToMarketing} id="marketing"></div>
       <div className={classes.servicesWrapper}>
         <div className={classes.laptopMobileVectorWrapper}>
           <div className={classes.laptopMobileHeaderWrapper}>
-            <Typography className={classes.laptopMobileHeader}>Build your Website</Typography>
+            <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
             <div className={classes.lineSpacer}></div>
-            <Typography className={classes.laptopMobileHeader}>Build your Business</Typography>
             <div className={classes.servicesDescription}>
-              <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b>.</Typography>
-              <div className={classes.marketingTextDivider}></div>
-              <Typography className={classes.marketingText}>Take your business to the <b>next level.</b></Typography>
+              <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b> and take your business to the <b>next level</b>.</Typography>
             </div>
           </div>
-          <div className={classes.laptopImageWrapper}>
+          {/* <div className={classes.laptopImageWrapper}>
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
-          </div>
+          </div> */}
         </div>
 
         <div className={classes.clientsWrapper}>
-          <Typography className={classes.clientsHeader}>Clients & Recent Projects</Typography>
+          <Typography className={classes.clientsHeader}>Recent Projects</Typography>
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
@@ -426,7 +429,7 @@ const Main = () => {
           </div>
         </div>
         <div className={classes.servicesHeaders}>
-          <Typography className={classes.servicesHeader}>What we do</Typography>
+          <Typography className={classes.servicesHeader}>How We Can Help</Typography>
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>
