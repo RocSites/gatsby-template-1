@@ -5,6 +5,8 @@ import PhoneFloating from '../images/neil-soni-6wdRuK7bVTE-unsplash.jpg'
 import BangzPhoto from '../images/BangzScreenshot.png'
 import PayviewPhoto from '../images/payviewScreenShoot2.png'
 import PhPoolsPhoto from '../images/phPoolsSpaScreenshot.png'
+import NykPhoto from "../images/nyk-screenshot.png"
+import EstuaryPhoto from "../images/estuary_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -383,6 +385,20 @@ const Main = () => {
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
+                <h3 className={classes.clientTitle}>Estuary - New York, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                A website for a real-time data capture, transform, and materialize platform.
+              </Typography>
+              <a target="_blank" href="https://estuary.dev/" class="image featured"
+              ><img className={classes.clientPhoto} src={EstuaryPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://estuary.dev/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
                 <h3 className={classes.clientTitle}>Payview - Rochester, NY</h3>
               </header>
               <Typography className={classes.clientDescription}>
@@ -390,9 +406,23 @@ const Main = () => {
                 funds reports.
               </Typography>
               <a target="_blank" href="https://www.mypayview.com/" class="image featured"
-              ><img className={classes.clientPhoto} src={PayviewPhoto} alt="" /></a>
+              ><img className={classes.clientPhoto} src={PayviewPhoto} alt="image of website" /></a>
 
               <Button className={classes.liveSiteButton} target="_blank" href="https://www.mypayview.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>New York Kitchen - Canandaigua, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                A website for a non-profit, focused on serving local NY food and beverage.
+              </Typography>
+              <a target="_blank" href="https://www.nykitchen.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={NykPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://www.nykitchen.com/">Live Site</Button>
             </section>
           </div>
           <div className={classes.clientSubwrapper}>
@@ -407,7 +437,7 @@ const Main = () => {
                 href="https://www.phpoolandspas.com/"
                 class="image featured"
                 target="_blank"
-              ><img className={classes.clientPhoto} src={PhPoolsPhoto} alt=""
+              ><img className={classes.clientPhoto} src={PhPoolsPhoto} alt="image of website"
                 /></a>
 
 
@@ -423,7 +453,7 @@ const Main = () => {
                 A website built for a local Rochester salon.
               </Typography>
               <a target="_blank" href="https://www.bangzsalon.com/" class="image featured"
-              ><img className={classes.clientPhoto} src={BangzPhoto} alt=""
+              ><img className={classes.clientPhoto} src={BangzPhoto} alt="image of website"
                 /></a>
 
 
