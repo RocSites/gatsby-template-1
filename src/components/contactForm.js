@@ -1,6 +1,6 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
-import CallIcon from "../images/call_icon.png"
+import CallIcon from "../images/call_icon2.png"
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
 import ReCAPTCHA from "react-google-recaptcha"
@@ -83,7 +83,7 @@ const withStyles = makeStyles((theme) => ({
     "& img": {
       height: "30px",
       width: "30px", 
-      margin: "auto"
+      margin: "10px"
     }
   },
   submitButtonWrapper: {
@@ -117,7 +117,7 @@ const ContactForm = (props) => {
           
           <a className={classes.callButton} href="tel:7705400142">
             <img src={CallIcon} />
-            Give us a call!
+            Call us!
           </a>
         </div>
 
