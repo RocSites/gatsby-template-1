@@ -8,6 +8,7 @@ import VectorBackground from '../images/endless-constellation2.svg'
 import PhPoolsPhoto from '../images/phPoolsSpaScreenshot.png'
 import NykPhoto from "../images/nyk-screenshot.png"
 import EstuaryPhoto from "../images/estuary_screenshot.png"
+import ChillGrillPhoto from "../images/chill_grill_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -389,6 +390,20 @@ const Main = () => {
 
         <div className={classes.clientsWrapper}>
           <Typography className={classes.clientsHeader}>Recent Projects</Typography>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Chill & Grill - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for a local Rochester ice cream shop and grill.
+              </Typography>
+              <a target="_blank" href="https://thatsasmall.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={ChillGrillPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://thatsasmall.com/">Live Site</Button>
+            </section>
+          </div>
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
