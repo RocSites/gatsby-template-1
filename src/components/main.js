@@ -9,6 +9,7 @@ import PhPoolsPhoto from '../images/phPoolsSpaScreenshot.png'
 import NykPhoto from "../images/nyk-screenshot.png"
 import EstuaryPhoto from "../images/estuary_screenshot.png"
 import ChillGrillPhoto from "../images/chill_grill_screenshot.png"
+import CloverPhoto from "../images/clover_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -390,6 +391,20 @@ const Main = () => {
 
         <div className={classes.clientsWrapper}>
           <Typography className={classes.clientsHeader}>Recent Projects</Typography>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Clover Lawn, Landscape, & Nursery - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for a local Rochester lawn and landscape company.
+              </Typography>
+              <a target="_blank" href="https://cloverlandscape.net/" class="image featured"
+              ><img className={classes.clientPhoto} src={CloverPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://cloverlandscape.net/">Live Site</Button>
+            </section>
+          </div>
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
