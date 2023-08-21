@@ -73,13 +73,13 @@ const withStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: "black",
     backgroundColor: "#88df95",
-    width: "180px",
     margin: "auto",
     marginTop: "20px",
     justifyContent: "center",
     alignItems: "center",
     padding: "20px",
     borderRadius: "35px",
+    fontFamily: "sans-serif",
     "& img": {
       height: "30px",
       width: "30px", 
@@ -115,9 +115,9 @@ const ContactForm = (props) => {
 
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
           
-          <a className={classes.callButton} href="tel:7705400142">
+          <a className={classes.callButton} href="tel:(585)204-0052">
             <img src={CallIcon} />
-            Call us!
+            (585) 204-0052
           </a>
         </div>
 
