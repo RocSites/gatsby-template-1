@@ -11,6 +11,7 @@ import EstuaryPhoto from "../images/estuary_screenshot.png"
 import ChillGrillPhoto from "../images/chill_grill_screenshot.png"
 import CloverPhoto from "../images/clover_screenshot.png"
 import BethRogersPhoto from "../images/beth_rogers_screenshot.png"
+import QualityCabinetsPhoto from "../images/qualitycab_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -392,6 +393,20 @@ const Main = () => {
 
         <div className={classes.clientsWrapper}>
           <Typography className={classes.clientsHeader}>Recent Projects</Typography>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Quality Cabinets - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for local Rochester cabinet distributor.
+              </Typography>
+              <a target="_blank" href="https://qualitycabinets.pro/" class="image featured"
+              ><img className={classes.clientPhoto} src={QualityCabinetsPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://qualitycabinets.pro/">Live Site</Button>
+            </section>
+          </div>
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
