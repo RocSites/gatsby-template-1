@@ -13,6 +13,7 @@ import CloverPhoto from "../images/clover_screenshot.png"
 import BethRogersPhoto from "../images/beth_rogers_screenshot.png"
 import QualityCabinetsPhoto from "../images/qualitycab_screenshot.png"
 import PittsfordPrintingPhoto from "../images/pittsford_printing_screenshot.png"
+import B2PPhoto from "../images/b2p_one_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
 import MarketingPhoto from '../images/monitor.png'
@@ -406,6 +407,20 @@ const Main = () => {
               ><img className={classes.clientPhoto} src={PittsfordPrintingPhoto} alt="image of website" /></a>
 
               <Button className={classes.liveSiteButton} target="_blank" href="https://pittsfordprinting.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Pittsford Printing - Pittsford, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website and content management system for local Rochester bowling pro shop.
+              </Typography>
+              <a target="_blank" href="https://b2pproshop.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={B2PPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://b2pproshop.com/">Live Site</Button>
             </section>
           </div>
           <div className={classes.clientSubwrapper}>
