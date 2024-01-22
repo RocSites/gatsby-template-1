@@ -412,7 +412,7 @@ const Main = () => {
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
-                <h3 className={classes.clientTitle}>Pittsford Printing - Pittsford, NY</h3>
+                <h3 className={classes.clientTitle}>Begin'rs To Pro's Pro Shop  - Greece, NY</h3>
               </header>
               <Typography className={classes.clientDescription}>
                 Custom website and content management system for local Rochester bowling pro shop.
