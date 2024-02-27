@@ -13,6 +13,7 @@ import CloverPhoto from "../images/clover_screenshot.png"
 import BethRogersPhoto from "../images/beth_rogers_screenshot.png"
 import QualityCabinetsPhoto from "../images/qualitycab_screenshot.png"
 import PittsfordPrintingPhoto from "../images/pittsford_printing_screenshot.png"
+import FairportComputerPhoto from "../images/fairport_screenshot_2.png"
 import B2PPhoto from "../images/b2p_one_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
@@ -390,6 +391,8 @@ const Main = () => {
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div> */}
           </div>
+          <p style={{color: "white", margin: "10px", fontSize: ".75rem"}}>photo by <a style={{ color: "white"}}href="https://unsplash.com/@yassine_khalfalli" target="_blank">Yassine Khalfalli</a></p>
+
         </BackgroundImage>
 
 
@@ -398,15 +401,29 @@ const Main = () => {
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
+                <h3 className={classes.clientTitle}>Fairport Computers - Fairport, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom Shopify website for local computer sales and service company.
+              </Typography>
+              <a target="_blank" href="https://fairportcomputer.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={FairportComputerPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://fairportcomputer.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
                 <h3 className={classes.clientTitle}>Pittsford Printing - Pittsford, NY</h3>
               </header>
               <Typography className={classes.clientDescription}>
                 Custom website and cloud portal for local Rochester printing and mailing company.
               </Typography>
-              <a target="_blank" href="https://pittsfordprinting.com/" class="image featured"
+              <a target="_blank" href="https://fairportcomputer.com/" class="image featured"
               ><img className={classes.clientPhoto} src={PittsfordPrintingPhoto} alt="image of website" /></a>
 
-              <Button className={classes.liveSiteButton} target="_blank" href="https://pittsfordprinting.com/">Live Site</Button>
+              <Button className={classes.liveSiteButton} target="_blank" href="https://fairportcomputer.com/">Live Site</Button>
             </section>
           </div>
           <div className={classes.clientSubwrapper}>
