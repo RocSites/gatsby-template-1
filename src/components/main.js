@@ -420,10 +420,10 @@ const Main = () => {
               <Typography className={classes.clientDescription}>
                 Custom website and cloud portal for local Rochester printing and mailing company.
               </Typography>
-              <a target="_blank" href="https://fairportcomputer.com/" class="image featured"
+              <a target="_blank" href="https://pittsfordprinting.com/" class="image featured"
               ><img className={classes.clientPhoto} src={PittsfordPrintingPhoto} alt="image of website" /></a>
 
-              <Button className={classes.liveSiteButton} target="_blank" href="https://fairportcomputer.com/">Live Site</Button>
+              <Button className={classes.liveSiteButton} target="_blank" href="https://pittsfordprinting.com/">Live Site</Button>
             </section>
           </div>
           <div className={classes.clientSubwrapper}>
