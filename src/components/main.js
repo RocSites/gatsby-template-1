@@ -8,12 +8,15 @@ import VectorBackground from '../images/endless-constellation2.svg'
 import PhPoolsPhoto from '../images/phPoolsSpaScreenshot.png'
 import NykPhoto from "../images/nyk-screenshot.png"
 import EstuaryPhoto from "../images/estuary_screenshot.png"
+import EducePhoto from "../images/educe_screenshot.png"
 import ChillGrillPhoto from "../images/chill_grill_screenshot.png"
 import CloverPhoto from "../images/clover_screenshot.png"
 import BethRogersPhoto from "../images/beth_rogers_screenshot.png"
 import QualityCabinetsPhoto from "../images/qualitycab_screenshot.png"
 import PittsfordPrintingPhoto from "../images/pittsford_printing_screenshot.png"
 import FairportComputerPhoto from "../images/fairport_screenshot_2.png"
+import SupSolPhoto from "../images/supsol_screenshot.png"
+import SmallTallPhoto from "../images/small_tall_Screenshot.png"
 import B2PPhoto from "../images/b2p_one_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
@@ -401,10 +404,38 @@ const Main = () => {
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
+                <h3 className={classes.clientTitle}>Small & Tall Power Washing - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for a local power/pressure washing company.
+              </Typography>
+              <a target="_blank" href="https://smallandtallpowerwashing.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={SmallTallPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://smallandtallpowerwashing.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Superior Solutions - Webster, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for a local packing and shipping company.
+              </Typography>
+              <a target="_blank" href="https://supsol.us/" class="image featured"
+              ><img className={classes.clientPhoto} src={SupSolPhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://supsol.us/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
                 <h3 className={classes.clientTitle}>Fairport Computers - Fairport, NY</h3>
               </header>
               <Typography className={classes.clientDescription}>
-                Custom Shopify website for local computer sales and service company.
+                Custom Shopify ecommerce website for local computer sales and service company.
               </Typography>
               <a target="_blank" href="https://fairportcomputer.com/" class="image featured"
               ><img className={classes.clientPhoto} src={FairportComputerPhoto} alt="image of website" /></a>
@@ -494,6 +525,20 @@ const Main = () => {
               ><img className={classes.clientPhoto} src={ChillGrillPhoto} alt="image of website" /></a>
 
               <Button className={classes.liveSiteButton} target="_blank" href="https://thatsasmall.com/">Live Site</Button>
+            </section>
+          </div>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Educe - Rochester, NY</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website and web application for note-taking application.
+              </Typography>
+              <a target="_blank" href="https://www.educe.club/" class="image featured"
+              ><img className={classes.clientPhoto} src={EducePhoto} alt="image of website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://www.educe.club/">Live Site</Button>
             </section>
           </div>
           <div className={classes.clientSubwrapper}>
