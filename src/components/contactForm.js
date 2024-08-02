@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
 import CallIcon from "../images/call_icon2.png"
+import EmailIcon from '@mui/icons-material/Email';
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
 import ReCAPTCHA from "react-google-recaptcha"
@@ -114,7 +115,10 @@ const ContactForm = (props) => {
         <Typography className={classes.formHeader}>Let's Connect</Typography>
 
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
-          
+        <a className={classes.callButton} href="mailto: doug@rocsites.com">
+            <EmailIcon sx={{marginRight: "10px"}} />
+            doug@rocsites.com
+          </a>
           <a className={classes.callButton} href="tel:(585)204-0052">
             <img src={CallIcon} />
             (585) 204-0052
