@@ -65,7 +65,7 @@ const Layout = (props) => {
         <main className={classes.content}>{props.children}</main>
         <footer className={classes.footer}>
           <div className={classes.copyright}>
-            © {new Date().getFullYear()} RocSites
+            © {new Date().getFullYear()} RocSites, LLC
           </div>
           {/* <div className={classes.socialIconsFooter}>
             <a href="https://www.facebook.com/RedPinVentures" style={{margin:"auto"}}>
