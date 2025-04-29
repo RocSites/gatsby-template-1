@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
 .landingBackground {
     display: flex;
     width: 100%;
@@ -7,6 +11,15 @@
     background: linear-gradient(300deg,darkviolet,#3688c8,#162444);
     background-size: 180% 180%;
     animation: gradient-animation 18s ease infinite;
+  }
+
+  .buildBoldText {
+    font-weight: bold;
+    color: #162444;
+  }
+
+  .buildBusinessText {
+    color: white;
   }
   
   @keyframes gradient-animation {

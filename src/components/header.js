@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, { useState, useEffect } from 'react'
 import RocSitesLogo from '../images/RocSites-logo/vector/newLogo_transparent.svg'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
@@ -30,6 +30,15 @@ const withStyles = makeStyles((theme) => ({
     top: 0,
     zIndex: "1"
   },
+  navBarScroll: {
+    position: "fixed",
+    display: "flex",
+    justifyContent: "space-between",
+    width: "100%",
+    top: 0,
+    zIndex: "1",
+    backgroundColor: "#162444"
+  },
   navbarWrapper: {
     display: "flex",
     justifyContent: "flex-end",
@@ -45,15 +54,54 @@ const withStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     textTransform: "none",
     color: "white",
+    padding: "10px",
     '&:hover': {
-      backgroundColor: "black",
+      margin: "auto 50px auto 0px",
+      backgroundColor: "#162444",
       boxShadow: 'none',
+      padding: "10px",
+      borderRadius: "16px",
       cursor: "pointer"
     },
     "@media(max-width: 960px)": {
-      margin: "30px 10px 0px 10px",
-      width: "max-content"
+      margin: "auto 5px auto 0px",
+      width: "max-content",
+      '&:hover': {
+        margin: "auto 5px auto 0px",
+        boxShadow: 'none',
+        padding: "10px",
+        borderRadius: "16px",
+        cursor: "pointer"
+      },
+    }
+  },
+  navbarButtonScroll: {
+    margin: "auto 50px auto 0px",
+    fontWeight: "bold",
+    textTransform: "none",
+    color: "white",
+    padding: "10px",
+    '&:hover': {
+      margin: "auto 50px auto 0px",
+      backgroundColor: "#6acce1",
+      boxShadow: 'none',
+      padding: "10px",
+      borderRadius: "16px",
+      cursor: "pointer"
     },
+    "@media(max-width: 960px)": {
+      width: "max-content",
+      margin: "auto 5px auto 0px",
+
+      '&:hover': {
+        margin: "auto 5px auto 0px",
+        backgroundColor: "#6acce1",
+        boxShadow: 'none',
+        padding: "10px",
+        borderRadius: "16px",
+        cursor: "pointer"
+      },
+    }
   },
   socialIconLink: {
     "@media(max-width: 600px)": {
@@ -70,8 +118,45 @@ const Header = (props) => {
 
   const classes = withStyles();
 
+    //navbar scroll when active state
+    const [navbarScroll, setNavbarScroll] = useState(false)
+
+    //logo scroll when active
+    const [navBarColor, setNavBarColor] = useState("black")
+  
+    //navbar scroll changeBackground function
+    const changeBackground = () => {
+      if (window.scrollY >= 66) {
+        setNavbarScroll(true)
+      } else {
+        setNavbarScroll(false)
+      }
+    }
+  
+    useEffect(() => {
+      changeBackground()
+      // adding the event when scroll change background
+      window.addEventListener("scroll", changeBackground)
+    })
+  
+    //logo scroll function
+    const changeColor = () => {
+      if (window.scrollY >= 60) {
+        setNavBarColor("white")
+      } else {
+        setNavBarColor("transparent")
+      }
+    }
+  
+    useEffect(() => {
+      changeColor()
+      // adding the event when scroll change Logo
+      window.addEventListener("scroll", changeColor)
+    })
+
   return (
-    <header className={classes.navBar}>
+    <header className={navbarScroll ? classes.navBarScroll : classes.navBar}
+>
       <Link to="/" style={{ color: `white`, textDecoration: `none`, display: "flex" }}>
         <img className={classes.logo} src={RocSitesLogo} alt="rocsites logo" />
       </Link>
@@ -81,7 +166,7 @@ const Header = (props) => {
           <Typography className={classes.navbarLink}>Button 3</Typography>  */}
         {props.showContactUs === true ? (
           <Typography
-            className={classes.navbarButton}
+            className={navbarScroll ? classes.navbarButtonScroll : classes.navbarButton}
             onClick={() => scrollTo('#contactForm')}
           >
             Contact Us
@@ -90,8 +175,8 @@ const Header = (props) => {
         ) : null}
 
         <Typography
-          className={classes.navbarButton}
-          onClick={() => scrollTo('#contactForm')}
+            className={navbarScroll ? classes.navbarButtonScroll : classes.navbarButton}
+            onClick={() => scrollTo('#services')}
         >
           Services
         </Typography>

@@ -238,6 +238,7 @@ const withStyles = makeStyles((theme) => ({
     width: "40%",
     minWidth: "600px",
     textAlign: "center",
+    color: "#162444",
     "@media (max-width:960px)": {
       width: "100%",
       minWidth: "unset",
@@ -275,16 +276,16 @@ const withStyles = makeStyles((theme) => ({
     }
   },
   lineSpacer: {
-    borderTop: "3px solid #162444",
+    borderTop: "3px solid black",
     width: "100%",
     "@media (max-width:960px)": {
-      borderTop: "3px solid #162444",
+      borderTop: "3px solid black",
       margin: "auto"
     }
   },
   scrollToMarketing: {
     height: "50px",
-    background: "black"
+    background: "#162444"
   },
   laptopImageWrapper: {
     display: "flex",
@@ -376,7 +377,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-      <div className={classes.scrollToMarketing} id="marketing"></div>
+      {/* <div className={classes.scrollToMarketing} id="marketing"></div> */}
       <div className={classes.servicesWrapper}>
         <BackgroundImage
           fluid={sources}
@@ -388,14 +389,14 @@ const Main = () => {
               <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
               <div className={classes.lineSpacer}></div>
               <div className={classes.servicesDescription}>
-                <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b> and take your business to the <b>next level</b>.</Typography>
+                <Typography className={classes.marketingText}>Custom, <span class="buildBoldText">mobile-ready</span> websites that <span class="buildBoldText">elevate</span> your company's <span class="buildBoldText">online presence</span> and take your business to the <span class="buildBoldText">next level</span>.</Typography>
               </div>
             </div>
             {/* <div className={classes.laptopImageWrapper}>
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div> */}
           </div>
-          <p style={{color: "white", margin: "10px", fontSize: ".75rem"}}>photo by <a style={{ color: "white"}}href="https://unsplash.com/@yassine_khalfalli" target="_blank">Yassine Khalfalli</a></p>
+          <p style={{ color: "white", margin: "10px", fontSize: ".75rem" }}>photo by <a style={{ color: "white" }} href="https://unsplash.com/@yassine_khalfalli" target="_blank">Yassine Khalfalli</a></p>
 
         </BackgroundImage>
 
@@ -622,6 +623,7 @@ const Main = () => {
             </section>
           </div>
         </div>
+        <div style={{ height: "100px" }} id="services"></div>
         <div className={classes.servicesHeaders}>
           <Typography className={classes.servicesHeader}>How We Can Help</Typography>
         </div>
