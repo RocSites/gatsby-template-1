@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
 import CallIcon from "../images/call_icon2.png"
+import CallIconWhite from "../images/call_icon_white.png"
 import EmailIcon from '@mui/icons-material/Email';
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
@@ -53,7 +54,7 @@ const withStyles = makeStyles((theme) => ({
   submitButton: {
     margin: "20px",
     backgroundColor: theme.palette.primary.main,
-    color: "black",
+    color: "white",
     borderColor: theme.palette.primary.main,
     borderRadius: "35px",
     padding: "15px",
@@ -72,8 +73,8 @@ const withStyles = makeStyles((theme) => ({
   callButton: {
     display: "flex",
     textDecoration: "none",
-    color: "black",
-    backgroundColor: "#88df95",
+    color: "white",
+    backgroundColor: "#162444",
     margin: "auto",
     marginTop: "20px",
     justifyContent: "center",
@@ -120,7 +121,7 @@ const ContactForm = (props) => {
             doug@rocsites.com
           </a>
           <a className={classes.callButton} href="tel:(585)204-0052">
-            <img src={CallIcon} />
+            <img src={CallIconWhite} />
             (585) 204-0052
           </a>
         </div>

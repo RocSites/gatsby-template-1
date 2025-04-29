@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import RocSitesLogo from '../images/RocSites-logo/vector/default-monochrome.svg'
+import RocSitesLogo from '../images/RocSites-logo/vector/newLogo_transparent.svg'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
 import scrollTo from 'gatsby-plugin-smoothscroll'
@@ -11,8 +11,7 @@ import { Typography } from "@material-ui/core"
 
 const withStyles = makeStyles((theme) => ({
   logo: {
-    height: "36px",
-    width: "160px",
+    height: "75px",
     margin: "20px",
     fill: "currentColor",
     "@media(max-width: 400px)": {

@@ -11,8 +11,8 @@ icon designer: Alfredo @ IconsAlfredo.us
 icon designer link: /AlfredoCreates
         
 
-fontColor: {"hex":"#88DF95"}
+fontColor: {"hex":"#162444"}
 bgColor: {"hex":"#01252C"}
-iconColor: {"hex":"#88DF95"}
+iconColor: {"hex":"#162444"}
 
       

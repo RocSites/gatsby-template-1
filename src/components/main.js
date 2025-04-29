@@ -29,6 +29,7 @@ import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import BackgroundImage from 'gatsby-background-image'
+import "./main.css"
 
 const withStyles = makeStyles((theme) => ({
   '@global': {
@@ -65,7 +66,7 @@ const withStyles = makeStyles((theme) => ({
     },
   },
   bannerTextImpactWord: {
-    color: "#88df95",
+    color: "#162444",
     fontSize: "5rem",
     fontWeight: "bold",
     textAlign: "center",
@@ -178,7 +179,7 @@ const withStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#162444",
     "@media(max-width: 650px)": {
       paddingTop: "110px"
     }
@@ -274,10 +275,10 @@ const withStyles = makeStyles((theme) => ({
     }
   },
   lineSpacer: {
-    borderTop: "3px solid #88df95",
+    borderTop: "3px solid #162444",
     width: "100%",
     "@media (max-width:960px)": {
-      borderTop: "3px solid #88df95",
+      borderTop: "3px solid #162444",
       margin: "auto"
     }
   },
@@ -327,11 +328,11 @@ const withStyles = makeStyles((theme) => ({
       textAlign: "center",
     }
   },
-  landingImageBackgroundWrapper: {
-    display: "flex",
-    width: "100%",
-    backgroundImage: `url(${VectorBackground})`
-  }
+  // landingImageBackgroundWrapper: {
+  //   display: "flex",
+  //   width: "100%",
+  //   backgroundImage: `url(${VectorBackground})`
+  // }
 }));
 
 
@@ -368,7 +369,7 @@ const Main = () => {
   return (
     <>
       <div className={classes.root}>
-        <div className={classes.landingImageBackgroundWrapper}>
+        <div class="landingBackground" className={classes.landingImageBackgroundWrapper}>
           <div className={classes.bannerTextWrapper}>
             <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
             <Typography className={classes.bannerTextImpactWord}>Together</Typography>
