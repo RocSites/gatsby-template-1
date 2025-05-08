@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `RocSites Official Website`,
+    title: `Build Your Business`,
     description: `Custom websites and marketing solutions`,
     author: `Doug Kellermeyer`,
   },
