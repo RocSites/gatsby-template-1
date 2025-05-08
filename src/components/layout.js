@@ -28,7 +28,8 @@ const withStyles = makeStyles((theme) =>({
      marginTop: "auto",
      marginBottom: "auto",
      marginLeft: "20px",
-     fontWeight: "bold"
+     fontWeight: "bold",
+     color: "#ffffff"
    },
    socialIconsFooter: {
      "@media(min-width: 600px)":{

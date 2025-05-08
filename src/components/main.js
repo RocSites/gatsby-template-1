@@ -166,11 +166,22 @@ const withStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontWeight: "bold",
     marginTop: "20px",
-    color: "white",
+    color: "#6acce1",
     "@media(max-width: 650px)": {
       fontSize: "1.9rem"
     }
   },
+  clientsHeaderHow: {
+    fontSize: "3.35rem",
+    textAlign: "center",
+    fontWeight: "bold",
+    marginTop: "20px",
+    color: "#162444",
+    "@media(max-width: 650px)": {
+      fontSize: "1.9rem"
+    }
+  },
+  
 
   clientsWrapper: {
     display: "flex",
@@ -203,7 +214,7 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     flex: 1,
-    backgroundColor: "rgb(27 27 27)",
+    backgroundColor: "#162444",
     borderRadius: "15px",
     paddingTop: "0px",
     margin: "20px"
@@ -270,6 +281,7 @@ const withStyles = makeStyles((theme) => ({
     fontSize: "3.35rem",
     lineHeight: "1.7",
     fontWeight: "bold",
+    color: "#ffffff",
     "@media (max-width:960px)": {
       textAlign: "center",
       fontSize: "1.9rem"
@@ -319,8 +331,7 @@ const withStyles = makeStyles((theme) => ({
     width: "50%",
     margin: "10px auto 30px auto",
     "&:hover": {
-      backgroundColor: theme.palette.primary.main
-    }
+      backgroundColor: "#6acce1",    }
   },
   clientTitle: {
     marginTop: "50px",
@@ -386,8 +397,8 @@ const Main = () => {
           <div className={classes.laptopMobileVectorWrapper}>
 
             <div className={classes.laptopMobileHeaderWrapper}>
-              <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
-              <div className={classes.lineSpacer}></div>
+              <Typography className={classes.laptopMobileHeader}>Build Your <span style={{color: "#6acce1"}}>Business</span></Typography>
+              {/* <div className={classes.lineSpacer}></div> */}
               <div className={classes.servicesDescription}>
                 <Typography className={classes.marketingText}>Custom, <span class="buildBoldText">mobile-ready</span> websites that <span class="buildBoldText">elevate</span> your company's <span class="buildBoldText">online presence</span> and take your business to the <span class="buildBoldText">next level</span>.</Typography>
               </div>
@@ -625,7 +636,8 @@ const Main = () => {
         </div>
         <div style={{ height: "100px" }} id="services"></div>
         <div className={classes.servicesHeaders}>
-          <Typography className={classes.servicesHeader}>How We Can Help</Typography>
+          <Typography className={classes.clientsHeaderHow}>How We Can Help</Typography>
+
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>

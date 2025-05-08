@@ -17,12 +17,15 @@ const withStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     marginTop: "100px",
     "& input": {
-      borderRadius: "3px",
-      fontWeight: "normal"
+      borderRadius: "16px",
+      fontWeight: "normal",
+      padding: "8px 10px"
     },
     "& textarea": {
       fontWeight: "normal",
       height: "100px",
+      borderRadius: "16px",
+      padding: "8px 10px"
     },
     "& form": {
       marginTop: "1.5rem",
@@ -65,7 +68,7 @@ const withStyles = makeStyles((theme) => ({
     width: "190px",
     fontWeight: "bold",
     '&:hover': {
-      backgroundColor: "white",
+      backgroundColor: "#6acce1",
       cursor: "pointer",
       boxShadow: 'none',
     },
@@ -86,7 +89,10 @@ const withStyles = makeStyles((theme) => ({
       height: "30px",
       width: "30px", 
       margin: "10px"
-    }
+    }, 
+    '&:hover': {
+      backgroundColor: "#6acce1"
+    },
   },
   submitButtonWrapper: {
     display: "flex",
