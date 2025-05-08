@@ -3,11 +3,11 @@ import { createMuiTheme } from '@material-ui/core/styles';
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: "#88df95",
+      main: "#162444",
       // light: "#000000"
     },
     background: {
-      default: "#88df95",
+      default: "#162444",
       paper: "#fff"
     },
     text: {
@@ -19,7 +19,7 @@ const theme = createMuiTheme({
     }
   },
   typography: {
-      fontFamily: 'Raleway'
+      fontFamily: 'Roboto'
   }
 });
 

@@ -1,6 +1,7 @@
 import React from "react"
 import { makeStyles } from '@material-ui/core/styles'
 import CallIcon from "../images/call_icon2.png"
+import CallIconWhite from "../images/call_icon_white.png"
 import EmailIcon from '@mui/icons-material/Email';
 import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography';
@@ -16,12 +17,15 @@ const withStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     marginTop: "100px",
     "& input": {
-      borderRadius: "3px",
-      fontWeight: "normal"
+      borderRadius: "16px",
+      fontWeight: "normal",
+      padding: "8px 10px"
     },
     "& textarea": {
       fontWeight: "normal",
       height: "100px",
+      borderRadius: "16px",
+      padding: "8px 10px"
     },
     "& form": {
       marginTop: "1.5rem",
@@ -53,7 +57,7 @@ const withStyles = makeStyles((theme) => ({
   submitButton: {
     margin: "20px",
     backgroundColor: theme.palette.primary.main,
-    color: "black",
+    color: "white",
     borderColor: theme.palette.primary.main,
     borderRadius: "35px",
     padding: "15px",
@@ -64,7 +68,7 @@ const withStyles = makeStyles((theme) => ({
     width: "190px",
     fontWeight: "bold",
     '&:hover': {
-      backgroundColor: "white",
+      backgroundColor: "#6acce1",
       cursor: "pointer",
       boxShadow: 'none',
     },
@@ -72,8 +76,8 @@ const withStyles = makeStyles((theme) => ({
   callButton: {
     display: "flex",
     textDecoration: "none",
-    color: "black",
-    backgroundColor: "#88df95",
+    color: "white",
+    backgroundColor: "#162444",
     margin: "auto",
     marginTop: "20px",
     justifyContent: "center",
@@ -85,7 +89,10 @@ const withStyles = makeStyles((theme) => ({
       height: "30px",
       width: "30px", 
       margin: "10px"
-    }
+    }, 
+    '&:hover': {
+      backgroundColor: "#6acce1"
+    },
   },
   submitButtonWrapper: {
     display: "flex",
@@ -120,7 +127,7 @@ const ContactForm = (props) => {
             doug@rocsites.com
           </a>
           <a className={classes.callButton} href="tel:(585)204-0052">
-            <img src={CallIcon} />
+            <img src={CallIconWhite} />
             (585) 204-0052
           </a>
         </div>

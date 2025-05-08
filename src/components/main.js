@@ -29,6 +29,7 @@ import Card from '@material-ui/core/Card'
 import CardHeader from "@material-ui/core/CardHeader"
 import scrollTo from 'gatsby-plugin-smoothscroll'
 import BackgroundImage from 'gatsby-background-image'
+import "./main.css"
 
 const withStyles = makeStyles((theme) => ({
   '@global': {
@@ -65,7 +66,7 @@ const withStyles = makeStyles((theme) => ({
     },
   },
   bannerTextImpactWord: {
-    color: "#88df95",
+    color: "#162444",
     fontSize: "5rem",
     fontWeight: "bold",
     textAlign: "center",
@@ -165,11 +166,22 @@ const withStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontWeight: "bold",
     marginTop: "20px",
-    color: "white",
+    color: "#6acce1",
     "@media(max-width: 650px)": {
       fontSize: "1.9rem"
     }
   },
+  clientsHeaderHow: {
+    fontSize: "3.35rem",
+    textAlign: "center",
+    fontWeight: "bold",
+    marginTop: "20px",
+    color: "#162444",
+    "@media(max-width: 650px)": {
+      fontSize: "1.9rem"
+    }
+  },
+  
 
   clientsWrapper: {
     display: "flex",
@@ -178,7 +190,7 @@ const withStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#000000",
+    backgroundColor: "#162444",
     "@media(max-width: 650px)": {
       paddingTop: "110px"
     }
@@ -202,7 +214,7 @@ const withStyles = makeStyles((theme) => ({
     display: "flex",
     flexDirection: "column",
     flex: 1,
-    backgroundColor: "rgb(27 27 27)",
+    backgroundColor: "#162444",
     borderRadius: "15px",
     paddingTop: "0px",
     margin: "20px"
@@ -237,6 +249,7 @@ const withStyles = makeStyles((theme) => ({
     width: "40%",
     minWidth: "600px",
     textAlign: "center",
+    color: "#162444",
     "@media (max-width:960px)": {
       width: "100%",
       minWidth: "unset",
@@ -268,22 +281,23 @@ const withStyles = makeStyles((theme) => ({
     fontSize: "3.35rem",
     lineHeight: "1.7",
     fontWeight: "bold",
+    color: "#ffffff",
     "@media (max-width:960px)": {
       textAlign: "center",
       fontSize: "1.9rem"
     }
   },
   lineSpacer: {
-    borderTop: "3px solid #88df95",
+    borderTop: "3px solid black",
     width: "100%",
     "@media (max-width:960px)": {
-      borderTop: "3px solid #88df95",
+      borderTop: "3px solid black",
       margin: "auto"
     }
   },
   scrollToMarketing: {
     height: "50px",
-    background: "black"
+    background: "#162444"
   },
   laptopImageWrapper: {
     display: "flex",
@@ -317,8 +331,7 @@ const withStyles = makeStyles((theme) => ({
     width: "50%",
     margin: "10px auto 30px auto",
     "&:hover": {
-      backgroundColor: theme.palette.primary.main
-    }
+      backgroundColor: "#6acce1",    }
   },
   clientTitle: {
     marginTop: "50px",
@@ -327,11 +340,11 @@ const withStyles = makeStyles((theme) => ({
       textAlign: "center",
     }
   },
-  landingImageBackgroundWrapper: {
-    display: "flex",
-    width: "100%",
-    backgroundImage: `url(${VectorBackground})`
-  }
+  // landingImageBackgroundWrapper: {
+  //   display: "flex",
+  //   width: "100%",
+  //   backgroundImage: `url(${VectorBackground})`
+  // }
 }));
 
 
@@ -368,14 +381,14 @@ const Main = () => {
   return (
     <>
       <div className={classes.root}>
-        <div className={classes.landingImageBackgroundWrapper}>
+        <div class="landingBackground" className={classes.landingImageBackgroundWrapper}>
           <div className={classes.bannerTextWrapper}>
             <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
             <Typography className={classes.bannerTextImpactWord}>Together</Typography>
           </div>
         </div>
       </div>
-      <div className={classes.scrollToMarketing} id="marketing"></div>
+      {/* <div className={classes.scrollToMarketing} id="marketing"></div> */}
       <div className={classes.servicesWrapper}>
         <BackgroundImage
           fluid={sources}
@@ -384,17 +397,17 @@ const Main = () => {
           <div className={classes.laptopMobileVectorWrapper}>
 
             <div className={classes.laptopMobileHeaderWrapper}>
-              <Typography className={classes.laptopMobileHeader}>Build Your Business</Typography>
-              <div className={classes.lineSpacer}></div>
+              <Typography className={classes.laptopMobileHeader}>Build Your <span style={{color: "#6acce1"}}>Business</span></Typography>
+              {/* <div className={classes.lineSpacer}></div> */}
               <div className={classes.servicesDescription}>
-                <Typography className={classes.marketingText}>Custom, <b>mobile-ready</b> websites that <b>elevate</b> your company's <b>online presence</b> and take your business to the <b>next level</b>.</Typography>
+                <Typography className={classes.marketingText}>Custom, <span class="buildBoldText">mobile-ready</span> websites that <span class="buildBoldText">elevate</span> your company's <span class="buildBoldText">online presence</span> and take your business to the <span class="buildBoldText">next level</span>.</Typography>
               </div>
             </div>
             {/* <div className={classes.laptopImageWrapper}>
             <img className={classes.laptopMobileVector} alt="phone floating in hand" src={PhoneFloating} />
           </div> */}
           </div>
-          <p style={{color: "white", margin: "10px", fontSize: ".75rem"}}>photo by <a style={{ color: "white"}}href="https://unsplash.com/@yassine_khalfalli" target="_blank">Yassine Khalfalli</a></p>
+          <p style={{ color: "white", margin: "10px", fontSize: ".75rem" }}>photo by <a style={{ color: "white" }} href="https://unsplash.com/@yassine_khalfalli" target="_blank">Yassine Khalfalli</a></p>
 
         </BackgroundImage>
 
@@ -621,8 +634,10 @@ const Main = () => {
             </section>
           </div>
         </div>
+        <div style={{ height: "100px" }} id="services"></div>
         <div className={classes.servicesHeaders}>
-          <Typography className={classes.servicesHeader}>How We Can Help</Typography>
+          <Typography className={classes.clientsHeaderHow}>How We Can Help</Typography>
+
         </div>
         <div className={classes.stockPhotoWrapper}>
           <Card className={classes.stockPhotoCard}>
