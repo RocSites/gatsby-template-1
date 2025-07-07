@@ -35,8 +35,16 @@ module.exports = {
         icon: `src/images/rocsites-logo-new/PNG/Logo 1@4x-8.png`, // This path is relative to the root of the site.
       },
     },
+      {
+    resolve: `gatsby-plugin-facebook-pixel`,
+    options: {
+      pixelId: "892207286454169",
+    },
+  },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
 }
+
+

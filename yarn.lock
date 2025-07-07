@@ -5859,6 +5859,11 @@ gatsby-plugin-compile-es6-packages@^2.1.0:
     "@babel/runtime" "^7.0.0"
     regex-escape "^3.4.8"
 
+gatsby-plugin-facebook-pixel@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-facebook-pixel/-/gatsby-plugin-facebook-pixel-1.0.8.tgz#8f5aa6816ddf1cf451c372464fa3f873d7dae288"
+  integrity sha512-oJfTMJxAv5AF2sganhtaq3+6GZ2W2s6/RjQxVsRUxUWMxhrtW6YeMsayAh1bVPgVQ8boJ0QyftipXe7fyq4BCA==
+
 gatsby-plugin-manifest@^5.11.0:
   version "5.11.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-5.11.0.tgz#5c47e2752725d8b5f40c4e2b43928eb1e6a33ba1"
