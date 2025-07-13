@@ -385,6 +385,7 @@ const Main = () => {
           <div className={classes.bannerTextWrapper}>
             <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
             <Typography className={classes.bannerTextImpactWord}>Together</Typography>
+              <button class="getStartedLandingButton"  onClick={() => scrollTo('#contactForm')}>Get Started</button>
           </div>
         </div>
       </div>

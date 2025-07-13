@@ -13,6 +13,21 @@
     animation: gradient-animation 18s ease infinite;
   }
 
+  .getStartedLandingButton {
+    width: 200px;
+    margin: 10px auto;
+    padding: 1em;
+    border-radius: 1em;
+    font-weight: bold;
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+
+  .getStartedLandingButton:hover {
+    background-color: #162444;
+    color: white;
+  }
+
   .buildBoldText {
     font-weight: bold;
     color: #162444;
