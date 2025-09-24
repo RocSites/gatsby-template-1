@@ -17,6 +17,7 @@ import PittsfordPrintingPhoto from "../images/pittsford_printing_screenshot.png"
 import FairportComputerPhoto from "../images/fairport_screenshot_2.png"
 import SupSolPhoto from "../images/supsol_screenshot.png"
 import SmallTallPhoto from "../images/small_tall_Screenshot.png"
+import StratiasPhoto from "../images/stratias_screenshot.png"
 import B2PPhoto from "../images/b2p_one_screenshot.png"
 import ResponsiveDesign from '../images/web-design.png'
 import SeoPhoto from '../images/seo2.png'
@@ -181,7 +182,7 @@ const withStyles = makeStyles((theme) => ({
       fontSize: "1.9rem"
     }
   },
-  
+
 
   clientsWrapper: {
     display: "flex",
@@ -331,7 +332,8 @@ const withStyles = makeStyles((theme) => ({
     width: "50%",
     margin: "10px auto 30px auto",
     "&:hover": {
-      backgroundColor: "#6acce1",    }
+      backgroundColor: "#6acce1",
+    }
   },
   clientTitle: {
     marginTop: "50px",
@@ -385,7 +387,7 @@ const Main = () => {
           <div className={classes.bannerTextWrapper}>
             <Typography className={classes.bannerText}>Let's Build Your Website</Typography>
             <Typography className={classes.bannerTextImpactWord}>Together</Typography>
-              <button class="getStartedLandingButton"  onClick={() => scrollTo('#contactForm')}>Get Started</button>
+            <button class="getStartedLandingButton" onClick={() => scrollTo('#contactForm')}>Get Started</button>
           </div>
         </div>
       </div>
@@ -398,7 +400,7 @@ const Main = () => {
           <div className={classes.laptopMobileVectorWrapper}>
 
             <div className={classes.laptopMobileHeaderWrapper}>
-              <Typography className={classes.laptopMobileHeader}>Build Your <span style={{color: "#6acce1"}}>Business</span></Typography>
+              <Typography className={classes.laptopMobileHeader}>Build Your <span style={{ color: "#6acce1" }}>Business</span></Typography>
               {/* <div className={classes.lineSpacer}></div> */}
               <div className={classes.servicesDescription}>
                 <Typography className={classes.marketingText}>Custom, <span class="buildBoldText">mobile-ready</span> websites that <span class="buildBoldText">elevate</span> your company's <span class="buildBoldText">online presence</span> and take your business to the <span class="buildBoldText">next level</span>.</Typography>
@@ -415,6 +417,20 @@ const Main = () => {
 
         <div className={classes.clientsWrapper}>
           <Typography className={classes.clientsHeader}>Recent Projects</Typography>
+          <div className={classes.clientSubwrapper}>
+            <section>
+              <header>
+                <h3 className={classes.clientTitle}>Stratias LLC - Richmond, VA</h3>
+              </header>
+              <Typography className={classes.clientDescription}>
+                Custom website for veteran-owned military & defense IT firm.
+              </Typography>
+              <a target="_blank" href="https://stratias.com/" class="image featured"
+              ><img className={classes.clientPhoto} src={StratiasPhoto} alt="image of denfense website" /></a>
+
+              <Button className={classes.liveSiteButton} target="_blank" href="https://stratias.com/">Live Site</Button>
+            </section>
+          </div>
           <div className={classes.clientSubwrapper}>
             <section>
               <header>
